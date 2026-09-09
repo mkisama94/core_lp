@@ -1,0 +1,62 @@
+﻿import React from 'react';
+import { SectionHeader } from '../../../components/common/SectionHeader';
+import { PowerFlowSimulator } from '../../../components/interactive/PowerFlowSimulator';
+
+export const PredictiveControl: React.FC = () => {
+  return (
+    <section id="control" className="py-20 md:py-28 bg-graphite border-b border-graphite-border bg-tech-grid">
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          number="03"
+          tag="PREDICTIVE DISCHARGE & CHARGE"
+          title="放電する瞬間も、充電する余裕も。"
+          subtitle="電力需要の見通し、目標デマンド、蓄電池の残容量（SOC）を常時演算。警報が出る前の先回り放電と、安全余裕を活かした充電により、次時限へ向けた余力を常に最適化します。"
+          theme="dark"
+        />
+
+        {/* Interactive Simulator Component */}
+        <PowerFlowSimulator />
+
+        {/* Technical Principles Grid */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans text-xs">
+          <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
+            <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
+              01 / 先行放電（スタートアップ放電）
+            </span>
+            <h4 className="text-sm font-bold text-paper-light">
+              警報を待たずにデマンドの芽を摘む
+            </h4>
+            <p className="text-slate-400 leading-relaxed">
+              従来のデマコンは受電電力が閾値を超えてから警報を出します。SPAQ COREは時限開始0:15から必要量を放電し、受電電力を初めから安全目標線内に抑え込みます。
+            </p>
+          </div>
+
+          <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
+            <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
+              02 / 反実仮想判定（需要復元）
+            </span>
+            <h4 className="text-sm font-bold text-paper-light">
+              放電による「見かけの低下」に惑わされない
+            </h4>
+            <p className="text-slate-400 leading-relaxed">
+              蓄電池が放電すると受電電力が下がり、制御が自動解除されて再上昇する「ハンチング」を防ぐため、EMS実放電量を足し戻して真の工場需要を復元・判定します。
+            </p>
+          </div>
+
+          <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
+            <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
+              03 / ラストスパート充電
+            </span>
+            <h4 className="text-sm font-bold text-paper-light">
+              30分平均の計算特性を活かした高速回収
+            </h4>
+            <p className="text-slate-400 leading-relaxed">
+              時限残り3分（27:00以降）は、充電電力の30分平均への寄与が小さくなります。契約電力枠内の残余電力量を厳密に計算し、安全に最大充電してSOCを急速回復します。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};

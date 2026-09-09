@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #101B24;
+    background-color: #F4F7F9;
+  }
+  
+  body {
+    @apply font-sans antialiased text-ink selection:bg-spaq-cyan selection:text-graphite-deep;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+}
+
+@layer utilities {
+  .border-graphite-fine {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .border-paper-fine {
+    border-color: #D3DEE5;
+  }
+
+  .bg-tech-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(56, 181, 222, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 181, 222, 0.04) 1px, transparent 1px);
+  }
+
+  .bg-paper-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(16, 27, 36, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(16, 27, 36, 0.03) 1px, transparent 1px);
+  }
+}
