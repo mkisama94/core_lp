@@ -37,18 +37,18 @@ export const ArchitectureDiagram: React.FC = () => {
               <span className="text-slate-400 block text-[11px]">受電電力・SOC・制御履歴のダッシュボード</span>
             </div>
             <div className="p-2.5 bg-graphite-card border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-slate-200 block">反実仮想分析・シャドー検証</span>
-              <span className="text-slate-400 block text-[11px]">蓄電池がなかった場合の仮想需要と削減効果検証</span>
+              <span className="font-mono font-bold text-slate-200 block">導入効果・制御内容の検証</span>
+              <span className="text-slate-400 block text-[11px]">蓄電池によるピーク抑制効果を確認</span>
             </div>
             <div className="p-2.5 bg-graphite-card border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-slate-200 block">監査ログ・モデル同期</span>
-              <span className="text-slate-400 block text-[11px]">判定理由コード（Reason Code）の長期保全</span>
+              <span className="font-mono font-bold text-slate-200 block">運用履歴の確認</span>
+              <span className="text-slate-400 block text-[11px]">判断根拠をたどり、監査や原因調査に活用</span>
             </div>
           </div>
 
           <div className="text-[10px] font-mono text-emerald-400 pt-1 flex items-center gap-1">
             <Shield className="w-3 h-3" />
-            <span>現場直接書込みなし（Read Only安全設計）</span>
+            <span>現場の状況を離れた場所から確認</span>
           </div>
         </div>
 
@@ -70,8 +70,8 @@ export const ArchitectureDiagram: React.FC = () => {
 
           <div className="space-y-2 text-xs">
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-signal-lime block">30分時限制御エンジン</span>
-              <span className="text-slate-300 block text-[11px]">スタートアップ放電・余力充電の瞬時判断</span>
+              <span className="font-mono font-bold text-signal-lime block">需要に応じた充放電</span>
+              <span className="text-slate-300 block text-[11px]">ピークへの対応と次の需要増加への備え</span>
             </div>
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
               <span className="font-mono font-bold text-paper-light block">現場での設備保護</span>
@@ -106,7 +106,7 @@ export const ArchitectureDiagram: React.FC = () => {
                 <span className="font-mono font-bold text-slate-200">産業用蓄電池 PCS / BMU</span>
                 <span className="text-[10px] text-slate-400">Modbus/RS-485</span>
               </div>
-              <span className="text-slate-400 block text-[11px]">過充電・過放電・温度保護は装置内で完結保証</span>
+              <span className="text-slate-400 block text-[11px]">過充電・過放電・温度異常からの保護を担当</span>
             </div>
             <div className="p-2.5 bg-graphite-card border border-graphite-border space-y-1">
               <div className="flex justify-between">
@@ -125,7 +125,7 @@ export const ArchitectureDiagram: React.FC = () => {
           </div>
 
           <div className="text-[10px] font-mono text-slate-400 pt-1">
-            ※既存メーカーの設備をそのまま活用可能
+            既存設備との接続条件を確認して構成を設計
           </div>
         </div>
       </div>

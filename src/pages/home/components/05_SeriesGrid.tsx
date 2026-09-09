@@ -17,7 +17,7 @@ export const SeriesGrid: React.FC = () => {
           number="05"
           tag="CORE SERIES LINEUP"
           title="現場ごとの電力運用に、COREを。"
-          subtitle="現行主力である施設・産業向け「SPAQ CORE」を中核とし、高密度コンピューティングの受電制約を見据えた次世代データセンターEMS構想まで。共通の予測・制御思想を用途ごとに展開します。"
+          subtitle="工場や産業施設向けのSPAQ COREを提供しています。AIデータセンター向けには、限られた受電容量を活用する電力運用の仕組みを計画中です。"
           theme="dark"
         />
 
@@ -69,8 +69,8 @@ export const SeriesGrid: React.FC = () => {
               {/* Key Features */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-graphite-border text-xs font-mono">
                 <div className="p-3 bg-graphite-deep border border-graphite-border">
-                  <span className="text-signal-lime block font-bold">30分時限制御エンジン</span>
-                  <span className="text-slate-400 text-[11px]">先行放電・余力充電・境界ガード</span>
+                  <span className="text-signal-lime block font-bold">需要に応じた充放電</span>
+                  <span className="text-slate-400 text-[11px]">ピークを抑え、次の需要増加に備える</span>
                 </div>
                 <div className="p-3 bg-graphite-deep border border-graphite-border">
                   <span className="text-signal-lime block font-bold">設備連携</span>
@@ -84,7 +84,7 @@ export const SeriesGrid: React.FC = () => {
                 to="/products/spaq-core"
                 className="font-mono text-xs text-slate-300 hover:text-paper-light flex items-center gap-1 group"
               >
-                <span>製品詳細・適合仕様を見る</span>
+                <span>製品の特長・導入条件を見る</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Button
@@ -138,15 +138,15 @@ export const SeriesGrid: React.FC = () => {
                 <ul className="space-y-1.5 text-slate-300 text-[11px]">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-amber-400" />
-                    <span>AI推論・学習クラスタの急峻な負荷変動特性への適応</span>
+                    <span>AIの学習・推論に伴う急な電力変動への対応</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-amber-400" />
-                    <span>特別高圧系統受電制約下での蓄電池バッファリング</span>
+                    <span>蓄電池を活用した、受電容量の制約への対応</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-amber-400" />
-                    <span>非常用発電機・UPS設備との責任分界トポロジー</span>
+                    <span>非常用発電機・UPSとの役割分担と設備連携</span>
                   </li>
                 </ul>
               </div>

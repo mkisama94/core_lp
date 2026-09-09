@@ -70,7 +70,7 @@ export default function SpaqCoreProductPage() {
                   variant="outline-light"
                   size="lg"
                 >
-                  制御アルゴリズム仕様
+                  制御の仕組みを見る
                 </Button>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function SpaqCoreProductPage() {
               number="01"
               tag="TARGET & CHALLENGES"
               title="適する現場と解決する課題"
-              subtitle="契約電力の超過リスク、既設デマコンと蓄電池の連動遅れ、設備のブラックボックス化。工場や産業施設の現場が抱える特有の課題に適合します。"
+              subtitle="ピーク超過への対応、空調停止による作業環境への影響、制御内容の確認。工場や産業施設が抱える電力運用の課題に対応します。"
               theme="light"
             />
 
@@ -130,8 +130,8 @@ export default function SpaqCoreProductPage() {
             <SectionHeader
               number="02"
               tag="RESPONSIBILITY MATRIX"
-              title="役割分担と責任分界マトリクス"
-              subtitle="制御権限と保護機能を曖昧にしない。SPAQ COREが担う演算・指令と、連携先機器が担う自律保護の境界を明確に定義しています。"
+              title="既存設備と連携して、現場の運用を支える"
+              subtitle="SPAQ COREは需要予測と充放電の判断を担当。計測や機器ごとの保護機能は既存設備が担い、それぞれの役割を確認して連携します。"
               theme="dark"
             />
 
@@ -160,7 +160,7 @@ export default function SpaqCoreProductPage() {
                 <div className="flex items-center justify-between border-b border-graphite-border pb-3">
                   <h3 className="text-lg font-bold text-paper-light font-mono flex items-center gap-2">
                     <Layers className="w-5 h-5 text-slate-400" />
-                    連携先設備（PCS/デマコン）が行うこと
+                    連携先の設備が行うこと
                   </h3>
                   <span className="font-mono text-xs text-slate-400">自律保護</span>
                 </div>
@@ -183,8 +183,8 @@ export default function SpaqCoreProductPage() {
             <SectionHeader
               number="03"
               tag="CORE FEATURES & SCHEDULE"
-              title="主要機能と30分スマート協調制御"
-              subtitle="電力会社の固定30分デマンド検針サイクルと完全連動。現場の空調を急停止させず、蓄電池が先回り防衛する5段階スマート協調シーケンスを搭載。"
+              title="ピーク対策と現場への配慮を両立する機能"
+              subtitle="需要の変化を先読みし、蓄電池を優先して活用。空調停止を抑える制御と次のピークに備える充電で、継続的な電力運用を支えます。"
               theme="light"
             />
 
@@ -242,7 +242,7 @@ export default function SpaqCoreProductPage() {
             <SectionHeader
               number="05"
               tag="VERIFIED FIELD RESULTS"
-              title="実機検証結果サマリ"
+              title="製造現場で確認した実証結果"
               subtitle="製造業A社の製造施設での実証運転において、突発負荷に対する先行放電とピーク超過ゼロを実測確認しました。"
               theme="light"
             />
@@ -262,7 +262,7 @@ export default function SpaqCoreProductPage() {
                 <div className="p-4 bg-white border border-paper-border">
                   <span className="text-xs text-ink-muted block">デマンド目標超過回数</span>
                   <span className="text-3xl font-black text-ink block mt-1">0 回</span>
-                  <span className="text-[10px] text-emerald-600 block mt-1">実測：超過リスク完全解消</span>
+                  <span className="text-[10px] text-emerald-600 block mt-1">実測：実証期間中の目標超過なし</span>
                 </div>
                 <div className="p-4 bg-white border border-paper-border">
                   <span className="text-xs text-ink-muted block">放電応答速度</span>
@@ -270,9 +270,9 @@ export default function SpaqCoreProductPage() {
                   <span className="text-[10px] text-ink-muted block mt-1">実測：先行判定から出力まで</span>
                 </div>
                 <div className="p-4 bg-white border border-paper-border">
-                  <span className="text-xs text-ink-muted block">次時限SOC回復率</span>
+                  <span className="text-xs text-ink-muted block">次の30分開始時の蓄電池残量</span>
                   <span className="text-3xl font-black text-ink block mt-1">88 %</span>
-                  <span className="text-[10px] text-ink-muted block mt-1">実測：ラストスパート充電</span>
+                  <span className="text-[10px] text-ink-muted block mt-1">実測：余裕を活用した充電の平均値</span>
                 </div>
               </div>
 
@@ -281,7 +281,7 @@ export default function SpaqCoreProductPage() {
                   to="/cases/manufacturing-a-actual"
                   className="font-mono text-xs text-ink hover:underline flex items-center gap-1 font-semibold"
                 >
-                  <span>この事例の完全レポートを見る</span>
+                  <span>実証内容と前提条件を見る</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -295,7 +295,7 @@ export default function SpaqCoreProductPage() {
             <SectionHeader
               number="06"
               tag="FAQ"
-              title="よくある技術的なご質問"
+              title="導入前によくあるご質問"
               subtitle="既設機器との互換性、通信断時の動作、操業停止の要否など、導入にあたって現場からよくいただく質問です。"
               theme="dark"
             />
@@ -324,7 +324,7 @@ export default function SpaqCoreProductPage() {
               あなたの現場に、SPAQ COREを。
             </h2>
             <p className="text-slate-300 max-w-xl mx-auto text-sm leading-relaxed">
-              既設蓄電池やデマコンの型番、受電データ（CSV）をご用意いただければ、現場に合わせた導入構成と削減効果のシミュレーションをご提示いたします。
+              既設蓄電池やデマンド監視装置の型番、受電データ（CSV）をご用意いただければ、現場に合わせた導入構成と削減効果のシミュレーションをご提示いたします。
             </p>
             <div className="pt-2 flex justify-center">
               <Button

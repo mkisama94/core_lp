@@ -13,7 +13,7 @@ export const Visualization: React.FC = () => {
           number="04"
           tag="OPERATIONAL VISUALIZATION"
           title="制御の状態を、運用の判断へ。"
-          subtitle="リアルタイムの受電電力・充放電状況から、制御が下された瞬間の「判断根拠（理由コード）」まで。ブラックボックスになりがちな産業制御のすべての判断を可視化・監査可能にします。"
+          subtitle="現在の電力使用状況と、充放電を行った理由をひとつの画面で確認。日々の状況把握から、運用の見直し、システム監査での説明までを支えます。"
           theme="light"
         />
 
@@ -37,7 +37,7 @@ export const Visualization: React.FC = () => {
                 : 'bg-paper-light text-ink-muted hover:text-ink border border-paper-border'
             }`}
           >
-            02 / 制御理由・監査ログ（Reason Code）
+            02 / 判断根拠・制御履歴
           </button>
         </div>
 
@@ -48,7 +48,7 @@ export const Visualization: React.FC = () => {
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
               <span className="font-bold text-paper-light tracking-wider">
-                SPAQ CORE EDGE TELEMETRY CONSOLE
+                SPAQ CORE 運用モニター
               </span>
               <Badge variant="graphite" size="sm">DEMONSTRATION</Badge>
             </div>
@@ -109,7 +109,7 @@ export const Visualization: React.FC = () => {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-slate-400 block">反実仮想推定（放電前需要）</span>
+                  <span className="text-slate-400 block">蓄電池の補完分を含む需要</span>
                   <span className="text-sm font-bold text-red-400 block">
                     需要上昇を検知
                   </span>
@@ -170,7 +170,7 @@ export const Visualization: React.FC = () => {
                   <tr>
                     <td className="py-2.5 px-3 text-slate-300">余力検出時</td>
                     <td className="py-2.5 px-3 text-sky-400">余力充電</td>
-                    <td className="py-2.5 px-3 text-slate-200">時限残余電力量再計算に基づくラストスパート急速充電</td>
+                    <td className="py-2.5 px-3 text-slate-200">電力目標までの余裕を確認し、次のピークに備えて充電</td>
                     <td className="py-2.5 px-3 text-sky-400">充電指令</td>
                     <td className="py-2.5 px-3 text-slate-400">SPAQ_CORE</td>
                     <td className="py-2.5 px-3 text-emerald-400">VERIFIED</td>

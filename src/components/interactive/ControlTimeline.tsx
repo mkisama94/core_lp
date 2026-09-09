@@ -20,61 +20,61 @@ const PHASES: TimelinePhase[] = [
     id: 'p1',
     timeRange: '時限切替',
     phaseNum: 'PHASE 01',
-    name: 'シームレス境界同期',
-    catchphrase: '時限跨ぎでも制御を切らさない「ゼロギャップ引き継ぎ」',
-    batteryAction: '新時限の受電を瞬時計測。必要な放電は途切れず継続',
-    acProtection: '空調停止をブロック（通常運転維持）',
-    summary: '電力会社の30分時限が切り替わった瞬間でも、前時限からのデマンド防衛をリセットせずシームレスに継続。',
-    detail: '受電電力・需要予測・蓄電池残量を時限切替に合わせて同期。切り替え時のタイムラグによる突発超過や空調の無駄な停止を未然に遮断します。',
-    tag: '時限完全同期'
+    name: '切り替わりも制御を継続',
+    catchphrase: '30分の区切りでも、必要な放電を引き継ぐ',
+    batteryAction: '切り替わり後の需要を確認し、必要な放電を継続',
+    acProtection: '不要な空調停止を抑制',
+    summary: '電力を管理する30分の区切りに合わせて、需要と蓄電池の状態を確認。ピークを抑えるために必要な制御を引き継ぎます。',
+    detail: '区切りの前後で判断が途切れないように、計測データと制御状態を同期。需要の上昇や不要な空調停止を抑えます。',
+    tag: '継続したピーク対策'
   },
   {
     id: 'p2',
     timeRange: '需要上昇の兆候',
     phaseNum: 'PHASE 02',
-    name: 'スマート先行ディフェンス',
-    catchphrase: '蓄電池が立ち上がるまで「空調停止を抑止」',
-    batteryAction: '無駄な放電はゼロ。真に必要な量だけ高速レスポンス',
-    acProtection: '蓄電池が守るため「空調停止を一時抑止」',
-    summary: '従来の「とりあえず放電する」無駄を廃止。蓄電池がデマンドを受け止める間、現場の空調停止を抑止します。',
-    detail: '大型機器の同時起動による需要急変を感知した時だけ、蓄電池が先回りして放電。蓄電池の立ち上がりを待つ間は空調全止めをブロックし、作業環境を守ります。',
-    tag: '現場快適性保護'
+    name: '需要の増加に先回り',
+    catchphrase: '空調を止める前に、蓄電池で対応する',
+    batteryAction: '需要の上昇に合わせて必要な電力を供給',
+    acProtection: '蓄電池で対応できる間は空調停止を抑制',
+    summary: '需要が増える兆候を捉え、蓄電池の放電を準備。空調停止による作業環境への影響を減らします。',
+    detail: 'デマンド監視装置と連携し、蓄電池の応答に合わせて空調への制御を調整。設備の状態を見ながら、ピーク超過への対応を進めます。',
+    tag: '作業環境への配慮'
   },
   {
     id: 'p3',
     timeRange: '通常運用',
     phaseNum: 'PHASE 03',
-    name: 'バッテリーファースト多段協調',
-    catchphrase: '蓄電池を限界まで使い切り、空調停止を最小限に',
-    batteryAction: '需要急増時は最前線で放電、余裕時は自動スタンバイ',
-    acProtection: '「両方抑止 → 段階制御 → 全止め」の多段防壁',
-    summary: 'いきなり空調を止めない。まず蓄電池が全力を出し、どうしても不足する場合のみ空調を段階的にアシストさせます。',
-    detail: 'デマンド監視装置との協調により「蓄電池での対応 → 設備の段階的抑制 → 必要時の保護動作」を自律的に選択。現場の生産性とデマンド抑制を極限まで両立します。',
-    tag: '多段階スマート防壁'
+    name: '蓄電池を優先して活用',
+    catchphrase: '蓄電池と設備を組み合わせ、空調停止を抑える',
+    batteryAction: '需要と残量に応じて放電・待機を選択',
+    acProtection: '蓄電池で補えない分を段階的に調整',
+    summary: 'まず蓄電池で需要を補い、それだけでは不足する場合に設備の使用電力を段階的に調整します。',
+    detail: '蓄電池の残量・出力と、現場設備の運用条件を考慮して制御を選択。作業環境に配慮しながらピークを抑えます。',
+    tag: '現場に合わせた調整'
   },
   {
     id: 'p4',
     timeRange: '余力の活用',
     phaseNum: 'PHASE 04',
-    name: '残余枠スマート急速チャージ',
-    catchphrase: '契約枠の「余り時間」を見極め、次時限へ安全フル充填',
-    batteryAction: '契約電力を超えない安全余力枠でSOCを高速回復',
-    acProtection: '空調判断を遅らせないリアルタイム残余評価',
-    summary: '時限終了直前の安全な電力量余力をAIが即座に算出し、蓄電池へ充電して次時限のピークへ即座に備えます。',
-    detail: '残り時間で使用可能な電力量を厳密に逆算。需要が再上昇した場合は瞬時に充電を停止・放電へ転換するため、契約電力超過のリスクはゼロです。',
-    tag: 'SOC高速回復'
+    name: '余裕を次の備えに',
+    catchphrase: '電力に余裕がある間に、次のピークへ備える',
+    batteryAction: '電力目標に余裕がある範囲で充電',
+    acProtection: '設備の使用電力を考慮して充電量を調整',
+    summary: '残り時間と需要予測から充電できる余裕を確認。蓄電池の残量を回復させ、次の需要増加に備えます。',
+    detail: '充電によって受電電力が増える分も考慮して出力を調整。需要が再び増えた場合は充電を抑え、必要に応じて放電へ切り替えます。',
+    tag: '蓄電池の余力を回復'
   },
   {
     id: 'p5',
     timeRange: '次時限への移行',
     phaseNum: 'PHASE 05',
-    name: '境界フェイルセーフガード',
-    catchphrase: '時限をまたぐ電力影響を抑える安全な制御引き継ぎ',
+    name: '次の30分へ引き継ぐ',
+    catchphrase: '充電の影響を抑えながら、次の運用へつなぐ',
     batteryAction: '次時限への影響を考慮して充電を調整。必要な放電は安全に引き継ぎ',
-    acProtection: '抑止状態を維持したまま次の30分へ接続',
-    summary: '時刻差や通信遅延による「時限を跨いだ充電超過」を物理的に遮断し、次の30分サイクルへ完全接続します。',
-    detail: '充電を安全に停止させつつ、デマンド保護に必要な放電と協調状態はそのまま次時限の冒頭へ引き継ぎ、24時間365日の連続自動防衛を実現します。',
-    tag: '完全境界ガード'
+    acProtection: '空調の運転状況も次の区間へ引き継ぎ',
+    summary: '次の30分に充電の影響を持ち越しすぎないよう出力を調整。必要な放電と設備の制御状態を引き継ぎます。',
+    detail: '時刻差や通信遅延も考慮しながら切り替えを管理。時間の区切りをまたいでも、現場の状態に応じたピーク対策を続けます。',
+    tag: '次の区間への備え'
   }
 ];
 
@@ -90,7 +90,7 @@ export const ControlTimeline: React.FC = () => {
             SMART DEMAND COORDINATION SEQUENCE
           </span>
           <h3 className="text-xl sm:text-2xl font-bold text-paper-light mt-1">
-            空調を急に止めない。電力会社デマンド時限と連動する「5段階スマート協調」
+            空調停止を抑えながら、需要の変化に対応する
           </h3>
         </div>
         <Badge variant="lime">特許出願中コア技術</Badge>
@@ -156,7 +156,7 @@ export const ControlTimeline: React.FC = () => {
           <div className="p-3 bg-graphite-card border border-graphite-border space-y-1">
             <div className="flex items-center gap-1.5 text-[10px] font-mono text-signal-lime uppercase">
               <Zap className="w-3.5 h-3.5" />
-              <span>蓄電池アクション</span>
+              <span>蓄電池の動き</span>
             </div>
             <span className="text-xs font-bold text-paper-light block font-sans">
               {active.batteryAction}

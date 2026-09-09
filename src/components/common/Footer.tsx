@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm pt-2">
               予測と制御をつなぐ、電力運用のコア。
-              電力需要と設備の状態を捉え、産業用蓄電池・設備全体の最適な充放電を自律判断します。
+              電力需要に合わせて蓄電池の充放電を判断し、施設のピーク抑制と日々の運用を支えます。
             </p>
 
             <div className="pt-2">
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs font-mono">
               <li>
                 <Link to="/technology" className="hover:text-paper-light transition-colors block py-0.5">
-                  技術・運用アーキテクチャ
+                  運用を支える技術と設計
                 </Link>
               </li>
               <li>
@@ -87,12 +87,12 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/cases" className="hover:text-paper-light transition-colors block py-0.5">
-                  導入事例一覧（実測／試算）
+                  導入事例・実証結果
                 </Link>
               </li>
               <li>
                 <Link to="/cases/manufacturing-a-actual" className="hover:text-paper-light transition-colors block py-0.5">
-                  実機検証実証事例
+                  製造業A社の実証事例
                 </Link>
               </li>
             </ul>
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
         <div className="mt-12 pt-6 border-t border-graphite-border/60 text-[11px] text-slate-500 leading-relaxed font-sans">
           <p>
             ※本サイトに掲載されているシステム構成図、波形、管理画面はすべて説明用イメージです。
-            削減数値・試算結果は特定の設備条件および過去稼働実績に基づく計算値であり、あらゆる施設での一律の効果を保証するものではありません。
+            掲載する実証結果は、記載の設備条件・実証期間におけるものです。導入効果は施設の設備構成や稼働状況によって異なります。
             AIデータセンターEMSは現在計画中の構想であり、仕様確定前の協議・要件ヒアリングを実施しています。
           </p>
         </div>

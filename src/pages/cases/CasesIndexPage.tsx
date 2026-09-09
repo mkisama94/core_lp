@@ -135,7 +135,7 @@ export default function CasesIndexPage() {
               自社設備のデマンドデータで事前試算しませんか？
             </h2>
             <p className="text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
-              過去の受電実績CSVをお送りいただければ、SPAQ COREによる反実仮想シミュレーションを無料で実施いたします。
+              過去の電力使用データをもとに、SPAQ COREを導入した場合のピーク抑制とコスト削減の見込みを無料で試算します。
             </p>
             <div className="pt-2">
               <Button

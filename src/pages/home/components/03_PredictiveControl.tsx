@@ -10,7 +10,7 @@ export const PredictiveControl: React.FC = () => {
           number="03"
           tag="PREDICTIVE DISCHARGE & CHARGE"
           title="放電する瞬間も、充電する余裕も。"
-          subtitle="電力需要の見通し、目標デマンド、蓄電池の残容量（SOC）を常時演算。警報が出る前の先回り放電と、安全余裕を活かした充電により、次時限へ向けた余力を常に最適化します。"
+          subtitle="需要が増える前に放電を準備し、電力に余裕があるときに充電。施設の目標と蓄電池の残量に合わせて、ピークを抑えながら次の需要増加に備えます。"
           theme="dark"
         />
 
@@ -21,37 +21,37 @@ export const PredictiveControl: React.FC = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans text-xs">
           <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
             <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
-              01 / スマート先行ディフェンス
+              01 / 空調停止を抑える
             </span>
             <h4 className="text-sm font-bold text-paper-light">
-              空調を止めずに、蓄電池が先回り防衛
+              空調を止める前に、蓄電池で対応
             </h4>
             <p className="text-slate-400 leading-relaxed">
-              従来の「警報が出たらエアコンが止まる」運用から脱却。デマコンと協調し、蓄電池が立ち上がるまで現場の空調停止を一時ブロック。快適性を維持したままデマンドを守ります。
+              需要が増える兆候を捉え、まず蓄電池の放電で対応。デマンド監視装置と連携して不要な空調停止を抑え、作業環境への影響を減らします。
             </p>
           </div>
 
           <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
             <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
-              02 / 反実仮想判定（需要復元）
+              02 / 必要な放電を続ける
             </span>
             <h4 className="text-sm font-bold text-paper-light">
-              放電による「見かけの低下」に惑わされない
+              電力の実際の使われ方に合わせて判断
             </h4>
             <p className="text-slate-400 leading-relaxed">
-              蓄電池が放電すると受電電力が下がり、制御が自動解除されて再上昇する「ハンチング」を防ぐため、EMS実放電量を足し戻して真の工場需要を復元・判定します。
+              蓄電池が補っている電力も含めて、施設全体の需要を把握。受電電力が下がっただけで放電を止めず、ピーク抑制に必要な対応を続けます。
             </p>
           </div>
 
           <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
             <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
-              03 / ラストスパート充電
+              03 / 次のピークに備える
             </span>
             <h4 className="text-sm font-bold text-paper-light">
-              30分平均の計算特性を活かした高速回収
+              電力の余裕を、蓄電池の備えに
             </h4>
             <p className="text-slate-400 leading-relaxed">
-              時限の残り時間と需要予測から、契約電力枠内で利用可能な充電余力を評価。設備の応答性と次時限への影響を考慮し、蓄電池の余力を回復します。
+              需要の見通しから、施設の電力目標に余裕がある範囲で充電。次の需要増加に使える電力を蓄え、蓄電池を継続的に活用します。
             </p>
           </div>
         </div>

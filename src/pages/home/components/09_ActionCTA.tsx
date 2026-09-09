@@ -9,7 +9,7 @@ export const ActionCTA: React.FC = () => {
       id: 'intro',
       title: '施設・産業向け導入相談',
       target: '工場・物流・産業施設の運用責任者様',
-      description: '自社設備での30分デマンド制御の実現性、既設蓄電池・デマコンとの接続可否について技術相談を受付中。',
+      description: '自社設備での30分デマンド制御の実現性、既設蓄電池・デマンド監視装置との接続可否について技術相談を受付中。',
       ctaText: '導入の可否を相談する',
       icon: <Building2 className="w-5 h-5 text-signal-lime" />,
       tag: '主力製品'
@@ -18,7 +18,7 @@ export const ActionCTA: React.FC = () => {
       id: 'simulation',
       title: '電力削減効果の事前試算',
       target: '契約電力の削減余地を把握したい企業様',
-      description: '過去の受電データ（CSV等）をお預かりし、SPAQ CORE導入時のピークカット効果・コスト削減額を反実仮想試算。',
+      description: '過去の電力使用データをもとに、蓄電池制御によるピーク抑制とコスト削減の見込みを確認します。',
       ctaText: '試算を申し込む',
       icon: <Calculator className="w-5 h-5 text-signal-lime" />,
       tag: 'データ診断'
@@ -27,7 +27,7 @@ export const ActionCTA: React.FC = () => {
       id: 'dc',
       title: 'AIデータセンターEMS 構想相談',
       target: '次世代データセンター開発・運用事業者様',
-      description: '特別高圧受電制約やGPUクラスタの急激な負荷変動に対するEMSバッファリング構想の共同検討・ヒアリング。',
+      description: 'AI処理に伴う急な電力変動や受電容量の制約について、蓄電池を活用した運用方法を共同で検討します。',
       ctaText: '構想について相談する',
       icon: <Server className="w-5 h-5 text-amber-400" />,
       tag: '計画中・共同検討'

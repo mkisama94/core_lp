@@ -6,28 +6,28 @@ export const HowItWorks: React.FC = () => {
   const steps = [
     {
       num: '01',
-      title: '状態観測',
+      title: '現場の状態を把握',
       tag: 'OBSERVE',
-      description: '受電点CT、デマコン、蓄電池SOC、空調稼働状態をリアルタイムに収集。通信品質を常時検証。',
-      detail: '生需要の計測だけでなく、欠損・遅延を自動検知'
+      description: '電力の使用状況、蓄電池の残量、空調の稼働状況をまとめて把握。需要の変化に対応するための情報を集めます。',
+      detail: '計測データの欠損や遅れも確認'
     },
     {
       num: '02',
-      title: '先読み予測',
+      title: 'ピークの兆候を捉える',
       tag: 'PREDICT',
-      description: '30分時限の残り時間と工場負荷トレンドから、時限末のデマンド予測値を算出。蓄電池の自己減衰を復元。',
-      detail: '安全側上限予測で警報発生前の兆候を捕捉'
+      description: '電力使用量の推移から、この先の需要を予測。蓄電池の放電による受電電力の低下も考慮し、ピーク超過の兆候を捉えます。',
+      detail: '警報後の対応から、兆候に応じた準備へ'
     },
     {
       num: '03',
-      title: '自律判断',
+      title: '必要な充放電を判断',
       tag: 'DECIDE',
-      description: '契約デマンド・計測特性を考慮した安全目標・安全余裕枠を照合し、「待機・放電・充電」を即時確定。',
-      detail: 'スタートアップ放電／ラストスパート充電の切替'
+      description: '施設の電力目標と蓄電池の余力に合わせて、放電・充電・待機を選択。現場の状況に応じた対応を自動化します。',
+      detail: '需要が増えるときは放電、余裕があるときは充電'
     },
     {
       num: '04',
-      title: '指令と監査',
+      title: '制御と根拠を記録',
       tag: 'ACT & AUDIT',
       description: 'PCSへ制御指令を送信し、判断の根拠と実行内容を記録。システム監査で運用の妥当性を確認できます。',
       detail: '制御履歴をたどり、監査時の事実確認や原因調査を支援'
@@ -41,7 +41,7 @@ export const HowItWorks: React.FC = () => {
           number="02"
           tag="HOW IT WORKS"
           title="予測から制御まで、ひとつにつなぐ。"
-          subtitle="「需要を読む → 充放電を判断 → 制御する → 証跡を残す」。属人的な警報対応を排し、現場の30分デマンド運用を一連の自動プロセスとして統合します。"
+          subtitle="需要の把握から蓄電池の制御、履歴の確認までをひとつに。警報のたびに担当者が判断・操作する負担を減らし、日々の電力運用を支えます。"
           theme="light"
         />
 
@@ -80,15 +80,15 @@ export const HowItWorks: React.FC = () => {
         {/* Roles between Cloud and Edge */}
         <div className="mt-12 bg-paper-light border border-paper-border p-6 sm:p-8">
           <h4 className="font-mono text-xs font-bold text-ink uppercase tracking-widest mb-4">
-            役割分担：クラウドと現場エッジコントローラー
+            現場で制御し、離れた場所から運用を確認
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs font-sans text-ink-light leading-relaxed">
             <div className="p-4 bg-paper border border-paper-border">
               <span className="font-mono font-bold text-ink text-sm block mb-1">
-                現場エッジ（SPAQ CORE 制御装置）
+                現場の制御装置（SPAQ CORE）
               </span>
               <p>
-                時限同期・高速サンプリング・PCSへの放電指令・異常時の安全な制御停止など、<strong>リアルタイム制御と設備保護</strong>を現場内で自律完結。インターネット遮断時も単独で止まらず稼働を維持します。
+                現場の電力データをもとに、<strong>蓄電池の充放電と設備保護</strong>を判断。クラウドへの接続状況に左右されず、設備の状態に応じた制御を現場で行います。
               </p>
             </div>
             <div className="p-4 bg-paper border border-paper-border">
@@ -96,7 +96,7 @@ export const HowItWorks: React.FC = () => {
                 クラウド管理画面（SPAQ Cloud）
               </span>
               <p>
-                複数拠点の受電電力・デマンド状況の俯瞰監視、反実仮想分析（蓄電池がなかった場合の試算検証）、モデル配信、長期監査ログの蓄積など、<strong>長期的な最適化・可視化と経営判断の支援</strong>を担います。
+                複数拠点の電力使用状況や制御履歴をまとめて確認。蓄電池によるピーク抑制効果の検証を通じて、<strong>運用の見直しや設備投資の判断</strong>に役立てられます。
               </p>
             </div>
           </div>

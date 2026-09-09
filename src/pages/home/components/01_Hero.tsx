@@ -65,11 +65,11 @@ export const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Activity className="w-4 h-4 text-signal-lime shrink-0" />
-                <span>30分時限同期制御</span>
+                <span>需要の変化に合わせた制御</span>
               </div>
               <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
                 <Cpu className="w-4 h-4 text-signal-lime shrink-0" />
-                <span>実機実証済みアルゴリズム</span>
+                <span>製造現場での実証</span>
               </div>
             </div>
           </div>
@@ -93,15 +93,15 @@ export const Hero: React.FC = () => {
                   <div className="flex items-center gap-2.5">
                     <div className="w-2 h-2 bg-slate-400" />
                     <div>
-                      <span className="text-paper-light font-bold block">電力会社受電 / デマコン</span>
-                      <span className="text-[10px] text-slate-400">30分時限パルス・受電CT</span>
+                      <span className="text-paper-light font-bold block">受電・需要の監視</span>
+                      <span className="text-[10px] text-slate-400">電力使用状況と需要の変化</span>
                     </div>
                   </div>
                   <span className="text-slate-300 font-mono">受電状況を監視</span>
                 </div>
 
                 <div className="flex justify-center text-slate-600">
-                  <span>↓ 需要先読み・反実仮想判定</span>
+                  <span>↓ 需要の見通しと設備の状態を確認</span>
                 </div>
 
                 {/* Node 2: SPAQ CORE (Central Hub) */}
@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
                     SPAQ CORE CONTROLLER
                   </div>
                   <div className="font-bold text-sm text-paper-light">
-                    30分時限 充放電判定エンジン
+                    需要に合わせて、充放電を判断
                   </div>
                   <div className="text-[10px] text-signal-lime font-mono">
                     設備制約・需要予測を統合し、先行放電を判断

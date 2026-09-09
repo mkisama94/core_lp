@@ -25,13 +25,13 @@ export default function TechnologyPage() {
             <div className="max-w-3xl space-y-4">
               <Badge variant="lime">TECHNOLOGY & RELIABILITY</Badge>
               <h1 className="text-3xl sm:text-5xl font-black text-paper-light tracking-tight">
-                技術・運用アーキテクチャ
+                運用を支える技術と設計
               </h1>
               <p className="font-mono text-xl sm:text-2xl text-signal-lime font-bold">
-                電力会社の30分時限制御に適合する独自アルゴリズムと、現場安全設計。
+                ピークを抑え、設備を守り、判断の根拠を残す。
               </p>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans pt-2">
-                産業用電力のデマンド制御は、わずか一度のピーク超過が1年間の基本料金に影響します。
+                現場の電力運用には、ピークへの対応に加え、設備の保護と制御内容を確認できることが求められます。
                 SPAQ COREは、30分時限の先読みと異常時の設備保護、判断根拠の記録を一体化。日々の運用からシステム監査での検証までを支えます。
               </p>
             </div>
@@ -44,8 +44,8 @@ export default function TechnologyPage() {
             <SectionHeader
               number="01"
               tag="30-MINUTE TIMELINE"
-              title="30分固定デマンド時限「5段階スマート協調」"
-              subtitle="電力会社の30分検針サイクルを5つの戦略フェーズに分割。蓄電池が最前線でデマンドを吸収し、現場の空調停止を最小限に抑える革新的な多段防壁アーキテクチャです。"
+              title="空調停止を抑える、蓄電池と設備の連携"
+              subtitle="30分ごとの電力管理に合わせて、需要の把握・放電・充電を調整。蓄電池を優先して活用し、現場への影響を抑えながらピークに対応します。"
               theme="dark"
             />
 
@@ -76,8 +76,8 @@ export default function TechnologyPage() {
             <SectionHeader
               number="02"
               tag="COUNTERFACTUAL ANALYSIS"
-              title="反実仮想判定（放電前需要の復元）"
-              subtitle="蓄電池が放電すると受電電力が下がり、制御装置自身が「需要が落ち着いた」と誤認して放電を止めてしまう自己減衰現象を、数式による真の需要復元で解決します。"
+              title="必要な放電を続けるための需要把握"
+              subtitle="受電電力の低下が、需要の減少によるものか、蓄電池の補完によるものかを区別。必要な放電を早く止めてしまうことを防ぎ、安定したピーク抑制につなげます。"
               theme="light"
             />
 
@@ -85,10 +85,10 @@ export default function TechnologyPage() {
               <div className="space-y-4 text-xs font-sans text-ink-light leading-relaxed">
                 <p>
                   蓄電池の放電中、受電CTが計測する電力値には「蓄電池によって引き下げられた見かけの電力」しか現れません。
-                  従来の簡易EMSでは、この見かけの電力をもとに判定するため、<strong>放電開始 → 受電低下 → 放電停止 → 受電再急騰 → 再警報</strong>という激しいハンチングを引き起こします。
+                  受電電力だけをもとに放電の要否を判断すると、<strong>放電開始 → 受電低下 → 放電停止 → 受電再急騰 → 再警報</strong>という動作の繰り返しが起こる場合があります。
                 </p>
                 <p>
-                  SPAQ COREは、PCSから取得した実有効放電電力を受電電力へリアルタイムに足し戻し、<strong>「もし蓄電池が放電していなかった場合の本来の工場需要」</strong>を継続的に復元。制御の自己減衰を数学的に遮断します。
+                  SPAQ COREは、PCSから取得した実有効放電電力を受電電力へリアルタイムに足し戻し、<strong>「もし蓄電池が放電していなかった場合の本来の工場需要」</strong>を継続的に推定します。この需要復元（反実仮想判定）によって、必要な放電を続けるかどうかを判断します。
                 </p>
               </div>
 
@@ -143,8 +143,8 @@ export default function TechnologyPage() {
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">EXPLAINABILITY</td>
-                    <td className="py-3 px-4 text-paper-light font-bold">状態遷移理由コード (Reason Code)</td>
-                    <td className="py-3 px-4">総合ステータスだけでなく、放電・充電・停止のすべての遷移に一意の理由コードを付与して記録。</td>
+                    <td className="py-3 px-4 text-paper-light font-bold">判断根拠の確認</td>
+                    <td className="py-3 px-4">放電・充電・停止へ切り替えた理由を記録。現場で何が起き、どのように判断したかを後から確認できます。</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">AUDITABILITY</td>
@@ -153,7 +153,7 @@ export default function TechnologyPage() {
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">TIME INTEGRITY</td>
-                    <td className="py-3 px-4 text-paper-light font-bold">高精度時刻同期 (NTP/GPS)</td>
+                    <td className="py-3 px-4 text-paper-light font-bold">出来事を時系列で追跡</td>
                     <td className="py-3 px-4">装置間の時刻を同期し、観測・判断・指令を共通の時間軸で追跡。事後検証に必要な時系列の整合性を保ちます。</td>
                   </tr>
                 </tbody>
@@ -168,26 +168,26 @@ export default function TechnologyPage() {
             <SectionHeader
               number="04"
               tag="SHADOW MODE & VALIDATION"
-              title="実機を止めないシャドーモード検証"
-              subtitle="本番の制御指令を出さずに、現場のリアルタイムデータを取り込んで仮想判定のみを走らせるシャドーモードを標準装備。操業リスクゼロで性能を事前に確認できます。"
+              title="本番制御の前に、現場で確かめる"
+              subtitle="設備を実際に制御せず、現場のデータで判断結果を確認する「シャドーモード」を用意。予測の精度やピークへの対応を検証してから、本番制御へ進めます。"
               theme="light"
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 font-mono text-center">
               <div className="p-6 bg-paper-light border border-paper-border">
-                <span className="text-xs text-ink-muted block uppercase">MAE (平均絶対誤差)</span>
-                <span className="text-3xl font-bold text-ink block mt-1">± 3.2 kW</span>
-                <span className="text-[11px] text-ink-subtle block mt-2">実測負荷と予測値の乖離検証</span>
+                <span className="text-xs text-ink-muted block uppercase">予測の精度</span>
+                <span className="text-2xl font-bold text-ink block mt-1">実測と比較</span>
+                <span className="text-[11px] text-ink-subtle block mt-2">実際の需要とのずれを確認</span>
               </div>
               <div className="p-6 bg-paper-light border border-paper-border">
-                <span className="text-xs text-ink-muted block uppercase">見逃し率 (Miss Rate)</span>
-                <span className="text-3xl font-bold text-emerald-600 block mt-1">0.0 %</span>
-                <span className="text-[11px] text-ink-subtle block mt-2">安全側上限予測による超過見落としゼロ</span>
+                <span className="text-xs text-ink-muted block uppercase">ピークへの対応</span>
+                <span className="text-2xl font-bold text-emerald-600 block mt-1">兆候を検証</span>
+                <span className="text-[11px] text-ink-subtle block mt-2">需要上昇を捉えられるか確認</span>
               </div>
               <div className="p-6 bg-paper-light border border-paper-border">
-                <span className="text-xs text-ink-muted block uppercase">通信整合性</span>
-                <span className="text-3xl font-bold text-ink block mt-1">100 %</span>
-                <span className="text-[11px] text-ink-subtle block mt-2">Modbus応答率・CRC整合性確認</span>
+                <span className="text-xs text-ink-muted block uppercase">設備との連携</span>
+                <span className="text-2xl font-bold text-ink block mt-1">接続を確認</span>
+                <span className="text-[11px] text-ink-subtle block mt-2">データの取得と応答の安定性を確認</span>
               </div>
             </div>
 

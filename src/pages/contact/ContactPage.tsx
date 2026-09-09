@@ -59,19 +59,19 @@ export default function ContactPage() {
       title: '施設・産業向け 導入相談',
       tag: '主力製品',
       badge: 'available',
-      note: '自社設備での30分デマンド制御の実現性や、既設蓄電池・デマコンとの連携について技術担当が回答します。'
+      note: '自社設備での30分デマンド制御の実現性や、既設蓄電池・デマンド監視装置との連携について技術担当が回答します。'
     },
     simulation: {
       title: '電力削減効果の事前試算',
       tag: 'データ診断',
       badge: 'lime',
-      note: '受電データ（過去のCSV等）に基づく反実仮想シミュレーションを行い、削減見込みをレポートします。'
+      note: '過去の電力使用データをもとに、蓄電池制御によるピーク抑制とコスト削減の見込みをレポートします。'
     },
     dc: {
       title: 'AIデータセンターEMS 構想相談',
       tag: '計画中・共同検討',
       badge: 'planning',
-      note: '急峻なGPU負荷変動への適応や特別高圧受電制約に対するバッファリング構想を協議いたします。'
+      note: 'AI処理に伴う電力変動や受電容量の制約を伺い、蓄電池を活用した運用方法を共同で検討します。'
     },
     partner: {
       title: '機器連携・パートナー相談',
@@ -323,7 +323,7 @@ export default function ContactPage() {
                           ? '検討中のAIデータセンターの受電規模、蓄電池の併設有無、協議したい課題などをご記入ください。'
                           : contactType === 'simulation'
                           ? '過去のデマンドデータ（CSV等）の有無、気になっているピーク時間帯などをご記入ください。'
-                          : '現在の受電設備、蓄電池やデマコンの有無、解決したいデマンド課題などをご記入ください。'
+                          : '現在の受電設備、蓄電池やデマンド監視装置の有無、解決したいデマンド課題などをご記入ください。'
                       }
                       className="w-full px-3.5 py-2.5 bg-white border border-paper-border text-sm text-ink focus:outline-none focus:border-ink"
                     />

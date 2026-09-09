@@ -29,7 +29,7 @@ export const PowerFlowSimulator: React.FC = () => {
 
   const stateDetails = {
     discharge: {
-      title: 'ピーク抑制放電（デマンド超過の先回り防止）',
+      title: '需要が増える前に、放電で備える',
       tag: '予兆検知と先行放電',
       description:
         '需要予測からピーク超過の兆候を捉え、蓄電池の余力と設備制約に応じて先回り放電を判断。受電電力を安全目標に沿って抑制します。',
@@ -40,10 +40,10 @@ export const PowerFlowSimulator: React.FC = () => {
       metric2: '安全目標と継続照合',
     },
     charge: {
-      title: '余力活用充電（残存電力量の安全回収）',
+      title: '電力の余裕を、次の備えに',
       tag: '運用余力と充電の最適化',
       description:
-        '工場稼働に余裕がある時間帯を検知。30分平均デマンドに悪影響を与えない範囲を厳密に計算し、蓄電池へ充電して次時限のピークへ備えます。次時限への影響を考慮して充電を調整します。',
+        '需要の見通しと施設の電力目標をもとに、充電できる余裕を判断。充電による電力の増加も考慮しながら、次のピークに使える電力を蓄えます。',
       statusText: '余力に応じて充電',
       statusColor: 'text-sky-400',
       batteryStatus: '次の需要変動へ備える',
@@ -51,7 +51,7 @@ export const PowerFlowSimulator: React.FC = () => {
       metric2: '受電枠と設備制約を考慮',
     },
     standby: {
-      title: '基準計測・定常監視（無制御安全待機）',
+      title: '需要が安定している間は、余力を温存',
       tag: '基準需要の観測と状態監視',
       description:
         '基準となる需要と設備の状態を継続的に観測。需給が安定し、充放電が不要な局面では待機を選択し、蓄電池の余力を温存します。',
@@ -68,7 +68,7 @@ export const PowerFlowSimulator: React.FC = () => {
       {/* State Selector Tabs */}
       <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-graphite-border">
         <div className="flex items-center gap-2">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400">制御ステート:</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-slate-400">運転モード:</span>
           <span className="font-mono text-xs text-signal-lime font-bold">[{activeState.toUpperCase()}]</span>
         </div>
 
@@ -91,7 +91,7 @@ export const PowerFlowSimulator: React.FC = () => {
                 : 'text-slate-400 hover:text-paper-light'
             }`}
           >
-            02 / 充電（余裕回収）
+            02 / 充電（次への備え）
           </button>
           <button
             onClick={() => setActiveState('standby')}
@@ -101,7 +101,7 @@ export const PowerFlowSimulator: React.FC = () => {
                 : 'text-slate-400 hover:text-paper-light'
             }`}
           >
-            03 / 待機（基準計測）
+            03 / 待機（余力温存）
           </button>
         </div>
       </div>
@@ -114,11 +114,11 @@ export const PowerFlowSimulator: React.FC = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5">
                 <span className="w-3 h-3 bg-red-400/80 inline-block" />
-                <span className="text-slate-300">生の需要（制御前）</span>
+                <span className="text-slate-300">施設の需要（制御前）</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-3 h-3 bg-signal-lime inline-block" />
-                <span className="text-slate-300">実効受電電力（CORE制御後）</span>
+                <span className="text-slate-300">受電電力（制御後）</span>
               </div>
             </div>
             <div className="flex items-center gap-1.5 text-amber-300">
