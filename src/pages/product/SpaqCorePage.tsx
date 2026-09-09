@@ -143,7 +143,7 @@ export default function SpaqCoreProductPage() {
                     <Cpu className="w-5 h-5 text-signal-lime" />
                     SPAQ CORE が行うこと
                   </h3>
-                  <Badge variant="lime">Single Writer</Badge>
+                  <Badge variant="lime">運用と監査を支える設計</Badge>
                 </div>
                 <ul className="space-y-3 font-sans text-xs text-slate-300 leading-relaxed">
                   {product.coreResponsibility.map((item, i) => (

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Building2, Server, Check, HelpCircle } from 'lucide-react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
@@ -73,8 +73,8 @@ export const SeriesGrid: React.FC = () => {
                   <span className="text-slate-400 text-[11px]">先行放電・余力充電・境界ガード</span>
                 </div>
                 <div className="p-3 bg-graphite-deep border border-graphite-border">
-                  <span className="text-signal-lime block font-bold">単一ライター責任分界</span>
-                  <span className="text-slate-400 text-[11px]">制御指令の競合防止・安全停止</span>
+                  <span className="text-signal-lime block font-bold">設備連携</span>
+                  <span className="text-slate-400 text-[11px]">既存設備と連携した充放電制御</span>
                 </div>
               </div>
             </div>

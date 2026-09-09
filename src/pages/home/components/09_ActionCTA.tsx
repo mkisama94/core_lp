@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowRight, Building2, Calculator, Server, Handshake } from 'lucide-react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
 import { Button } from '../../../components/common/Button';
@@ -36,7 +36,7 @@ export const ActionCTA: React.FC = () => {
       id: 'partner',
       title: '機器連携・パートナー相談',
       target: '蓄電池PCS・計測器・設備メーカー各社様',
-      description: '単一ライター責任分界に基づくインターフェース整合試験、OEM提供、販売協業に関するディスカッション。',
+      description: '設備間のインターフェース整合試験、OEM提供、販売協業に関するディスカッション。',
       ctaText: '連携条件を相談する',
       icon: <Handshake className="w-5 h-5 text-signal-lime" />,
       tag: '協業・通信仕様'

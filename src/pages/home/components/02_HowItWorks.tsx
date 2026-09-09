@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Activity, Brain, Zap, ShieldCheck, ArrowRight } from 'lucide-react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
 
@@ -29,8 +29,8 @@ export const HowItWorks: React.FC = () => {
       num: '04',
       title: '指令と監査',
       tag: 'ACT & AUDIT',
-      description: '単一ライターとしてPCSへ制御指令を送信。すべての判断に一意の理由コード（Reason Code）を付与し記録。',
-      detail: '長期にわたり改ざん不可のローカル一次証跡を保持'
+      description: 'PCSへ制御指令を送信し、判断の根拠と実行内容を記録。システム監査で運用の妥当性を確認できます。',
+      detail: '制御履歴をたどり、監査時の事実確認や原因調査を支援'
     }
   ];
 
@@ -88,7 +88,7 @@ export const HowItWorks: React.FC = () => {
                 現場エッジ（SPAQ CORE 制御装置）
               </span>
               <p>
-                時限同期・高速サンプリング・PCSへの放電指令・フェールセーフ安全待機など、<strong>リアルタイム制御と設備保護</strong>を現場内で自律完結。インターネット遮断時も単独で止まらず稼働を維持します。
+                時限同期・高速サンプリング・PCSへの放電指令・異常時の安全な制御停止など、<strong>リアルタイム制御と設備保護</strong>を現場内で自律完結。インターネット遮断時も単独で止まらず稼働を維持します。
               </p>
             </div>
             <div className="p-4 bg-paper border border-paper-border">

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
 
 export const DeploymentProcess: React.FC = () => {
@@ -22,7 +22,7 @@ export const DeploymentProcess: React.FC = () => {
       title: '機器導入・通信結合試験',
       period: '約 1〜2 日（現場作業）',
       description: 'SPAQ CORE本体の設置、CT配線、Modbus/RS-485通信接続および安全フェールセーフ動作試験を実施。',
-      output: '現場ドライラン試験・単一ライター確認'
+      output: '現場ドライラン試験・異常時の設備保護確認'
     },
     {
       num: 'STEP 04',

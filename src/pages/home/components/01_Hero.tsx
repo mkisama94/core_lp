@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowRight, Cpu, ShieldCheck, Activity, ChevronDown } from 'lucide-react';
 import { Button } from '../../../components/common/Button';
 import { Badge } from '../../../components/common/Badge';
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
             <div className="pt-6 border-t border-graphite-border grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-signal-lime shrink-0" />
-                <span>単一ライター安全保護</span>
+                <span>異常時の設備保護</span>
               </div>
               <div className="flex items-center gap-2">
                 <Activity className="w-4 h-4 text-signal-lime shrink-0" />
@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="flex justify-center text-slate-600">
-                  <span>↓ 単一ライターModbus高速指令</span>
+                  <span>↓ 設備の状態に応じた充放電指令</span>
                 </div>
 
                 {/* Node 3: Battery & PCS */}

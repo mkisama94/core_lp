@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Building2, Calculator, Server, Handshake, Phone, Mail, Send } from 'lucide-react';
 import { Navbar } from '../../components/common/Navbar';
@@ -77,7 +77,7 @@ export default function ContactPage() {
       title: '機器連携・パートナー相談',
       tag: '協業・通信仕様',
       badge: 'graphite',
-      note: '蓄電池PCS・計測器・設備メーカー各社様との単一ライター責任分界やプロトコル整合に関するご相談です。'
+      note: '蓄電池PCS・計測器・設備メーカー各社様との設備連携やプロトコル整合に関するご相談です。'
     }
   }[contactType];
 

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Server, Cpu, Database, Activity, Shield, ArrowDown, ArrowUp, RefreshCw, Layers } from 'lucide-react';
 import { Badge } from '../common/Badge';
 
@@ -8,13 +8,13 @@ export const ArchitectureDiagram: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-graphite-border">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-signal-lime">
-            System Architecture & Single-Writer Responsibility
+            System Architecture & Operational Reliability
           </span>
           <h3 className="text-xl font-bold text-paper-light mt-1">
-            クラウド・エッジ・現場設備を分断しない「単一ライター保護構成」
+            現場の自律制御と、クラウドでの運用確認をつなぐ構成
           </h3>
         </div>
-        <Badge variant="lime">制御権限と責任分界を明確化</Badge>
+        <Badge variant="lime">現場運用と監査を支援</Badge>
       </div>
 
       {/* Main Diagram Grid */}
@@ -55,7 +55,7 @@ export const ArchitectureDiagram: React.FC = () => {
         {/* Layer 2: SPAQ CORE (Edge Controller) - Center Core */}
         <div className="bg-graphite-light border-2 border-signal-lime/80 p-5 space-y-4 relative shadow-lg">
           <div className="absolute -top-3 left-4 bg-signal-lime text-graphite-deep font-mono text-[10px] font-black px-2 py-0.5 tracking-wider uppercase">
-            Single Writer (単一制御責任者)
+            現場で充放電を自律判断
           </div>
 
           <div className="flex items-center justify-between border-b border-graphite-border-light pb-3">
@@ -74,17 +74,17 @@ export const ArchitectureDiagram: React.FC = () => {
               <span className="text-slate-300 block text-[11px]">スタートアップ放電・余力充電の瞬時判断</span>
             </div>
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-paper-light block">単一ライター保護</span>
-              <span className="text-slate-300 block text-[11px]">他装置とのModbus競合書き込みを排他遮断</span>
+              <span className="font-mono font-bold text-paper-light block">現場での設備保護</span>
+              <span className="text-slate-300 block text-[11px]">設備の状態に応じて充放電を調整・停止</span>
             </div>
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-paper-light block">長期不揮発ログ</span>
-              <span className="text-slate-300 block text-[11px]">通信断でも装置内に一次証跡を蓄積・欠落なし</span>
+              <span className="font-mono font-bold text-paper-light block">監査に活かせる制御履歴</span>
+              <span className="text-slate-300 block text-[11px]">判断根拠を装置内に記録し、事実確認・原因調査に活用</span>
             </div>
           </div>
 
           <div className="p-2 bg-signal-lime/10 border border-signal-lime/30 text-[11px] text-signal-lime font-mono">
-            通信途絶時は即座にフェールセーフ安全待機へ移行
+            通信異常時も設備保護を優先し、現場への影響を抑制
           </div>
         </div>
 

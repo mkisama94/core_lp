@@ -32,7 +32,7 @@ export default function TechnologyPage() {
               </p>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans pt-2">
                 産業用電力のデマンド制御は、わずか一度のピーク超過が1年間の基本料金に影響します。
-                SPAQ COREは、リアルタイムの現場通信から30分時限の先読み、単一ライター保護、長期不揮発ログまでを一体化し、止まらない・競合しない制御を具現化しています。
+                SPAQ COREは、30分時限の先読みと異常時の設備保護、判断根拠の記録を一体化。日々の運用からシステム監査での検証までを支えます。
               </p>
             </div>
           </div>
@@ -118,8 +118,8 @@ export default function TechnologyPage() {
             <SectionHeader
               number="03"
               tag="EXTERNAL REQUIREMENTS"
-              title="外部システム要求仕様と単一ライター保護"
-              subtitle="協議用ドラフトに基づく堅牢な責任分界。他装置との競合書込みを排除し、万一の通信断でも安全側に自律停止します。"
+              title="設備への影響を抑え、運用を検証できる設計"
+              subtitle="通信や計測の異常時には設備保護を優先し、現場への影響を抑制。制御の経緯を記録することで、障害調査やシステム監査での事実確認を支えます。"
               theme="dark"
             />
 
@@ -137,9 +137,9 @@ export default function TechnologyPage() {
                 </thead>
                 <tbody className="divide-y divide-graphite-border/50 text-[11px] text-slate-300">
                   <tr>
-                    <td className="py-3 px-4 text-signal-lime font-bold">CONTROL AUTHORITY</td>
-                    <td className="py-3 px-4 text-paper-light font-bold">単一ライター責任分界</td>
-                    <td className="py-3 px-4">PCSへの制御指令の発行主体をSPAQ COREに限定。上位監視装置はRead Only化し競合を物理防止。</td>
+                    <td className="py-3 px-4 text-signal-lime font-bold">OPERATIONAL SAFETY</td>
+                    <td className="py-3 px-4 text-paper-light font-bold">異常時の設備保護</td>
+                    <td className="py-3 px-4">通信や計測の異常時は充放電を調整・停止し、設備への影響を抑えながら現場での確認・対応を支援します。</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">EXPLAINABILITY</td>
@@ -148,8 +148,8 @@ export default function TechnologyPage() {
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">AUDITABILITY</td>
-                    <td className="py-3 px-4 text-paper-light font-bold">長期不揮発一次証跡ログ</td>
-                    <td className="py-3 px-4">通信断・電源断でも消去されない不揮発メモリへ長期にわたり蓄積。外部からJSON/CSVで監査抽出可能。</td>
+                    <td className="py-3 px-4 text-paper-light font-bold">システム監査・原因調査の支援</td>
+                    <td className="py-3 px-4">判断根拠と制御履歴を保持し、JSON/CSVで抽出。監査時の証跡確認や障害時の原因調査、運用の妥当性の説明に活用できます。</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 text-signal-lime font-bold">TIME INTEGRITY</td>

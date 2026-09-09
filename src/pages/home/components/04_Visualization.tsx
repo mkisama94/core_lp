@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { LayoutDashboard, CheckCircle, AlertCircle, Eye, Search, FileText } from 'lucide-react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
 import { Badge } from '../../../components/common/Badge';
@@ -120,10 +120,10 @@ export const Visualization: React.FC = () => {
                 <div className="space-y-2">
                   <span className="text-slate-400 block">制御主体</span>
                   <span className="text-sm font-bold text-paper-light block">
-                    SPAQ CORE (Single Writer)
+                    SPAQ CORE
                   </span>
                   <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
-                    制御指令の権限を一元化し、他機器との競合を防止。
+                    判断時の設備状態と指令内容を記録し、制御の経緯を確認。
                   </p>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const Visualization: React.FC = () => {
               </table>
 
               <div className="pt-2 text-[10px] text-slate-500 font-mono">
-                ※すべての制御イベントは長期にわたり、装置内不揮発メモリおよびクラウド監査基盤に二重保持されます。
+                制御履歴と判断根拠を装置内・クラウドに記録し、システム監査での確認や障害時の原因調査に活用できます。
               </div>
             </div>
           )}
