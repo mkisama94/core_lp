@@ -15,7 +15,7 @@ export const DeploymentProcess: React.FC = () => {
       title: '設計・シミュレーション検証',
       period: '約 2〜3 週間',
       description: '実データに基づく反実仮想シミュレーションおよびシャドーモードによる制御モデルの整合検証を実施。',
-      output: '安全目標（kW）設定・通信接続仕様書の策定'
+      output: '設備条件に応じた安全目標の設計・通信接続仕様書の策定'
     },
     {
       num: 'STEP 03',

@@ -74,7 +74,7 @@ export const SeriesGrid: React.FC = () => {
                 </div>
                 <div className="p-3 bg-graphite-deep border border-graphite-border">
                   <span className="text-signal-lime block font-bold">単一ライター責任分界</span>
-                  <span className="text-slate-400 text-[11px]">排他レジスタ書込み・安全停止</span>
+                  <span className="text-slate-400 text-[11px]">制御指令の競合防止・安全停止</span>
                 </div>
               </div>
             </div>

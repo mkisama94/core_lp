@@ -15,7 +15,7 @@ export const CaseHighlights: React.FC = () => {
             number="06"
             tag="CASE HIGHLIGHTS"
             title="制御の成果を、確かめる。"
-            subtitle="現場の設備条件・稼働データに基づく実機検証実績と、実デマンドデータに基づくシミュレーション試算。「実測」と「試算」を厳密に区別して公開しています。"
+            subtitle="製造業A社における30分時限制御とスタートアップ先行放電の実証を紹介します。現場の設備条件・稼働データに基づき、実機検証で確認された成果を掲載しています。"
             theme="light"
             className="mb-0 md:mb-0"
           />
@@ -25,13 +25,13 @@ export const CaseHighlights: React.FC = () => {
             size="sm"
             icon={<ArrowRight className="w-3.5 h-3.5" />}
           >
-            すべての事例を見る
+            実証事例を見る
           </Button>
         </div>
 
         {/* Case Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {CASES.slice(0, 2).map((caseItem) => (
+        <div className="grid grid-cols-1 gap-8">
+          {CASES.map((caseItem) => (
             <div
               key={caseItem.id}
               className="bg-paper-light border border-paper-border p-6 sm:p-8 flex flex-col justify-between hover:border-ink transition-colors"

@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
                       <span className="text-[10px] text-slate-400">30分時限パルス・受電CT</span>
                     </div>
                   </div>
-                  <span className="text-slate-300 font-mono">332 kW</span>
+                  <span className="text-slate-300 font-mono">受電状況を監視</span>
                 </div>
 
                 <div className="flex justify-center text-slate-600">

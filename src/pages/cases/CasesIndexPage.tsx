@@ -1,24 +1,19 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Filter, Building2, CheckCircle2, ShieldAlert, Cpu } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Navbar } from '../../components/common/Navbar';
 import { Footer } from '../../components/common/Footer';
 import { Badge } from '../../components/common/Badge';
 import { Button } from '../../components/common/Button';
 import { SectionHeader } from '../../components/common/SectionHeader';
-import { CASES, CaseItem } from '../../data/casesData';
+import { CASES } from '../../data/casesData';
 
 export default function CasesIndexPage() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'actual' | 'simulation'>('all');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filteredCases = CASES.filter((c) => {
-    if (activeFilter === 'all') return true;
-    return c.type === activeFilter;
-  });
 
   return (
     <div className="min-h-screen bg-graphite flex flex-col selection:bg-signal-lime selection:text-graphite-deep">
@@ -34,66 +29,23 @@ export default function CasesIndexPage() {
                 導入事例・実証結果
               </h1>
               <p className="font-mono text-xl sm:text-2xl text-signal-lime font-bold">
-                実機検証で確認された成果と、モデル試算データの透明な公開。
+                製造業A社での実機検証で確認された成果を公開。
               </p>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans pt-2">
-                SPAQ COREは、過大な削減保証や曖昧な宣伝数値を掲載しません。
-                工場現場での実機試験データ（実測）と、過去1年間の受電実績に基づくシミュレーション（試算）を厳格に分けて提示しています。
+                製造業A社における30分時限制御とスタートアップ先行放電の実証事例を紹介します。
+                現場の設備構成・課題・制御方法と、実証期間中に確認された実測成果を掲載しています。
               </p>
             </div>
           </div>
         </section>
 
-        {/* Filter & Cases List */}
+        {/* Cases List */}
         <section className="py-16 md:py-24 bg-paper border-b border-paper-border text-ink">
           <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-paper-border mb-10">
-              <div className="flex items-center gap-2">
-                <Filter className="w-4 h-4 text-ink-muted" />
-                <span className="font-mono text-xs text-ink-muted uppercase tracking-wider">
-                  データ種別で絞り込み:
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2 p-1 bg-paper-light border border-paper-border font-mono text-xs">
-                <button
-                  onClick={() => setActiveFilter('all')}
-                  className={`px-4 py-2 transition-colors ${
-                    activeFilter === 'all'
-                      ? 'bg-ink text-paper-light font-bold'
-                      : 'text-ink-muted hover:text-ink'
-                  }`}
-                >
-                  すべて ({CASES.length})
-                </button>
-                <button
-                  onClick={() => setActiveFilter('actual')}
-                  className={`px-4 py-2 transition-colors ${
-                    activeFilter === 'actual'
-                      ? 'bg-ink text-paper-light font-bold'
-                      : 'text-ink-muted hover:text-ink'
-                  }`}
-                >
-                  実測データのみ ({CASES.filter((c) => c.type === 'actual').length})
-                </button>
-                <button
-                  onClick={() => setActiveFilter('simulation')}
-                  className={`px-4 py-2 transition-colors ${
-                    activeFilter === 'simulation'
-                      ? 'bg-ink text-paper-light font-bold'
-                      : 'text-ink-muted hover:text-ink'
-                  }`}
-                >
-                  シミュレーション試算 ({CASES.filter((c) => c.type === 'simulation').length})
-                </button>
-              </div>
-            </div>
-
             {/* Cases Cards */}
             <div className="space-y-8">
-              {filteredCases.map((c) => (
+              {CASES.map((c) => (
                 <div
                   key={c.id}
                   className="bg-paper-light border border-paper-border p-6 sm:p-8 hover:border-ink transition-colors"
