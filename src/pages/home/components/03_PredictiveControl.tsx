@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { SectionHeader } from '../../../components/common/SectionHeader';
 import { PowerFlowSimulator } from '../../../components/interactive/PowerFlowSimulator';
 
@@ -21,13 +21,13 @@ export const PredictiveControl: React.FC = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans text-xs">
           <div className="bg-graphite-card border border-graphite-border p-5 space-y-2">
             <span className="font-mono text-signal-lime font-bold text-xs uppercase block">
-              01 / 先行放電（スタートアップ放電）
+              01 / スマート先行ディフェンス
             </span>
             <h4 className="text-sm font-bold text-paper-light">
-              警報を待たずにデマンドの芽を摘む
+              空調を止めずに、蓄電池が先回り防衛
             </h4>
             <p className="text-slate-400 leading-relaxed">
-              従来のデマコンは受電電力が閾値を超えてから警報を出します。SPAQ COREは時限開始0:15から必要量を放電し、受電電力を初めから安全目標線内に抑え込みます。
+              従来の「警報が出たらエアコンが止まる」運用から脱却。デマコンと協調し、蓄電池が立ち上がるまで現場の空調停止を一時ブロック。快適性を維持したままデマンドを守ります。
             </p>
           </div>
 

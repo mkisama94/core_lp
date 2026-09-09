@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -183,8 +183,8 @@ export default function SpaqCoreProductPage() {
             <SectionHeader
               number="03"
               tag="CORE FEATURES & SCHEDULE"
-              title="主要機能と30分時限制御"
-              subtitle="電力会社の固定30分デマンド検針サイクルに完全に一致する制御スケジュール。基準計測からスタートアップ放電、余力充電、境界ガードまでを自動運用。"
+              title="主要機能と30分スマート協調制御"
+              subtitle="電力会社の固定30分デマンド検針サイクルと完全連動。現場の空調を急停止させず、蓄電池が先回り防衛する5段階スマート協調シーケンスを搭載。"
               theme="light"
             />
 

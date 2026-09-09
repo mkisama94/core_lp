@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, ShieldCheck, Activity, Database, CheckCircle2, Lock, Terminal } from 'lucide-react';
 import { Navbar } from '../../components/common/Navbar';
@@ -44,8 +44,8 @@ export default function TechnologyPage() {
             <SectionHeader
               number="01"
               tag="30-MINUTE TIMELINE"
-              title="30分固定デマンド時限制御"
-              subtitle="電力会社の30分検針サイクルを5つの明確なフェーズに分割。デマコンのベースライン測定を妨げず、かつ先行放電と余力充電を成立させる独自タイムラインです。"
+              title="30分固定デマンド時限「5段階スマート協調」"
+              subtitle="電力会社の30分検針サイクルを5つの戦略フェーズに分割。蓄電池が最前線でデマンドを吸収し、現場の空調停止を最小限に抑える革新的な多段防壁アーキテクチャです。"
               theme="dark"
             />
 
@@ -61,7 +61,7 @@ export default function TechnologyPage() {
               </div>
               <div className="p-4 bg-[#070D10] border border-graphite-border space-y-2 text-slate-300">
                 <div>電力会社計測誤差補正目標 = デマンド目標(399kW) ÷ (1 + 計測誤差率 5%) = <span className="text-signal-lime font-bold">380 kW</span></div>
-                <div>スタートアップ安全目標 = 計測誤差補正目標(380kW) - 固定安全余裕(20kW) = <span className="text-signal-lime font-bold">360 kW</span></div>
+                <div>デマンド防衛安全目標 = 計測誤差補正目標(380kW) - 固定安全余裕(20kW) = <span className="text-signal-lime font-bold">360 kW</span></div>
                 <div className="text-slate-500 pt-1">
                   ※突発的な大口負荷変動が生じても、360kW以内に制御を抑え込むことで、計量器の公称目標（399kW）を確実に保護します。
                 </div>
