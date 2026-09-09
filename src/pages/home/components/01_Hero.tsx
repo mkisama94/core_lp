@@ -94,7 +94,7 @@ export const Hero: React.FC = () => {
                     <div className="w-2 h-2 bg-slate-400" />
                     <div>
                       <span className="text-paper-light font-bold block">電力会社受電 / デマコン</span>
-                      <span className="text-[10px] text-slate-400">30分時限パルス・受電CT (R002/R004)</span>
+                      <span className="text-[10px] text-slate-400">30分時限パルス・受電CT</span>
                     </div>
                   </div>
                   <span className="text-slate-300 font-mono">332 kW</span>
@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
                     30分時限 充放電判定エンジン
                   </div>
                   <div className="text-[10px] text-signal-lime font-mono">
-                    安全目標: 360 kW ｜ 先行放電演算中
+                    設備制約・需要予測を統合し、先行放電を判断
                   </div>
                 </div>
 
@@ -130,13 +130,13 @@ export const Hero: React.FC = () => {
                       <span className="text-[10px] text-slate-400">自律過充放電保護・非常時インターロック</span>
                     </div>
                   </div>
-                  <span className="text-signal-lime font-bold font-mono">+50 kW 放電</span>
+                  <span className="text-signal-lime font-bold font-mono">必要出力を自律調整</span>
                 </div>
               </div>
 
               <div className="mt-4 pt-3 border-t border-graphite-border flex justify-between items-center text-[10px] font-mono text-slate-500">
                 <span>※説明用模式図</span>
-                <span>制御周期: 1000ms</span>
+                <span>リアルタイム協調制御</span>
               </div>
             </div>
           </div>

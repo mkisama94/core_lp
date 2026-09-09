@@ -236,14 +236,14 @@ export default function SpaqCoreProductPage() {
           </div>
         </section>
 
-        {/* Template 6: 事例・検証結果（ユニオンマシナリ様等の実機実証） */}
+        {/* Template 6: 事例・検証結果（実証先企業での実機実証） */}
         <section className="py-16 md:py-24 bg-paper border-b border-paper-border text-ink">
           <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeader
               number="05"
               tag="VERIFIED FIELD RESULTS"
               title="実機検証結果サマリ"
-              subtitle="金属切削加工工場（ユニオンマシナリ様拠点）での実証運転において、突発負荷に対する先行放電とピーク超過ゼロを実測確認しました。"
+              subtitle="製造業A社の製造施設での実証運転において、突発負荷に対する先行放電とピーク超過ゼロを実測確認しました。"
               theme="light"
             />
 
@@ -252,10 +252,10 @@ export default function SpaqCoreProductPage() {
                 <div>
                   <Badge variant="actual">実測データ</Badge>
                   <h3 className="text-xl font-bold text-ink mt-2">
-                    精密金属切削工場 実機実証（契約電力 500kW級 / 蓄電池 62.5kWh）
+                    製造業A社での実機実証（設備の詳細は非公開）
                   </h3>
                 </div>
-                <span className="font-mono text-xs text-ink-muted">2026年7月〜8月 実証運転</span>
+                <span className="font-mono text-xs text-ink-muted">実証運転（実施時期非公開）</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 font-mono text-center">
@@ -278,7 +278,7 @@ export default function SpaqCoreProductPage() {
 
               <div className="flex justify-end pt-2">
                 <Link
-                  to="/cases/union-machinery-actual"
+                  to="/cases/manufacturing-a-actual"
                   className="font-mono text-xs text-ink hover:underline flex items-center gap-1 font-semibold"
                 >
                   <span>この事例の完全レポートを見る</span>

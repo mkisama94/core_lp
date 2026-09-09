@@ -14,7 +14,7 @@ export const ArchitectureDiagram: React.FC = () => {
             クラウド・エッジ・現場設備を分断しない「単一ライター保護構成」
           </h3>
         </div>
-        <Badge variant="lime">COM-01〜COM-25 準拠</Badge>
+        <Badge variant="lime">制御権限と責任分界を明確化</Badge>
       </div>
 
       {/* Main Diagram Grid */}
@@ -74,11 +74,11 @@ export const ArchitectureDiagram: React.FC = () => {
               <span className="text-slate-300 block text-[11px]">スタートアップ放電・余力充電の瞬時判断</span>
             </div>
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-paper-light block">単一ライター保護 (COM-02)</span>
+              <span className="font-mono font-bold text-paper-light block">単一ライター保護</span>
               <span className="text-slate-300 block text-[11px]">他装置とのModbus競合書き込みを排他遮断</span>
             </div>
             <div className="p-2.5 bg-graphite-deep border border-graphite-border space-y-1">
-              <span className="font-mono font-bold text-paper-light block">13ヶ月不揮発ログ (COM-16)</span>
+              <span className="font-mono font-bold text-paper-light block">長期不揮発ログ</span>
               <span className="text-slate-300 block text-[11px]">通信断でも装置内に一次証跡を蓄積・欠落なし</span>
             </div>
           </div>
@@ -113,7 +113,7 @@ export const ArchitectureDiagram: React.FC = () => {
                 <span className="font-mono font-bold text-slate-200">デマンド監視装置 / 受電CT</span>
                 <span className="text-[10px] text-slate-400">パルス・接点信号</span>
               </div>
-              <span className="text-slate-400 block text-[11px]">R002/R004受電データ・時限同期信号</span>
+              <span className="text-slate-400 block text-[11px]">受電データ・時限同期信号</span>
             </div>
             <div className="p-2.5 bg-graphite-card border border-graphite-border space-y-1">
               <div className="flex justify-between">

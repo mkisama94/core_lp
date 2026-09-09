@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/cases/union-machinery-actual" className="hover:text-paper-light transition-colors block py-0.5">
+                <Link to="/cases/manufacturing-a-actual" className="hover:text-paper-light transition-colors block py-0.5">
                   実機検証実証事例
                 </Link>
               </li>

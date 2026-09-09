@@ -6,16 +6,19 @@ import { Footer } from '../../components/common/Footer';
 import { Badge } from '../../components/common/Badge';
 import { Button } from '../../components/common/Button';
 import { CASES } from '../../data/casesData';
+import NotFound from '../NotFound';
 
 export default function CaseDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
-  const caseItem = CASES.find((c) => c.slug === slug) || CASES[0];
+  const caseItem = CASES.find((c) => c.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  if (!caseItem) return <NotFound />;
 
   return (
     <div className="min-h-screen bg-graphite flex flex-col selection:bg-signal-lime selection:text-graphite-deep">

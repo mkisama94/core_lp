@@ -20,7 +20,7 @@ export default function SampleDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-gray-800 text-lg font-bold">デマンド監視システム</h2>
-              <p className="text-gray-400 text-xs mt-0.5">リアルタイム電力データ分析ダッシュボード</p>
+              <p className="text-gray-400 text-xs mt-0.5">電力データ分析ダッシュボード（デモ）</p>
             </div>
             <div className="flex items-center gap-2">
               <select className="bg-white border border-gray-200 text-gray-600 text-xs rounded-lg px-3 py-2 cursor-pointer focus:outline-none shadow-sm">
@@ -34,6 +34,8 @@ export default function SampleDashboard() {
               </button>
             </div>
           </div>
+
+          <p className="text-xs text-gray-600 bg-white border border-gray-200 rounded-lg p-3">操作イメージを示す架空のサンプルデータです。実際の案件の計測値・設定値・導入成果ではありません。</p>
 
           {/* Top row: Gauge + KPI */}
           <div className="grid grid-cols-12 gap-4">

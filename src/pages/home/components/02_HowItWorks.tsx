@@ -8,7 +8,7 @@ export const HowItWorks: React.FC = () => {
       num: '01',
       title: '状態観測',
       tag: 'OBSERVE',
-      description: '受電点CT、デマコン（R002/R004）、蓄電池SOC、空調稼働状態を1〜5秒周期で収集。通信品質を常時検証。',
+      description: '受電点CT、デマコン、蓄電池SOC、空調稼働状態をリアルタイムに収集。通信品質を常時検証。',
       detail: '生需要の計測だけでなく、欠損・遅延を自動検知'
     },
     {
@@ -22,15 +22,15 @@ export const HowItWorks: React.FC = () => {
       num: '03',
       title: '自律判断',
       tag: 'DECIDE',
-      description: '契約デマンド・計測誤差補正目標（360kW）・安全余裕枠を照合し、「待機・放電・充電」を即時確定。',
+      description: '契約デマンド・計測特性を考慮した安全目標・安全余裕枠を照合し、「待機・放電・充電」を即時確定。',
       detail: 'スタートアップ放電／ラストスパート充電の切替'
     },
     {
       num: '04',
       title: '指令と監査',
       tag: 'ACT & AUDIT',
-      description: '単一ライターとしてPCSへModbus書込み。すべての判断に一意の理由コード（Reason Code）を付与し記録。',
-      detail: '13ヶ月間改ざん不可のローカル一次証跡を保持'
+      description: '単一ライターとしてPCSへ制御指令を送信。すべての判断に一意の理由コード（Reason Code）を付与し記録。',
+      detail: '長期にわたり改ざん不可のローカル一次証跡を保持'
     }
   ];
 
@@ -88,7 +88,7 @@ export const HowItWorks: React.FC = () => {
                 現場エッジ（SPAQ CORE 制御装置）
               </span>
               <p>
-                時限同期・高速サンプリング・PCSへの放電指令・フェールセーフ安全待機など、<strong>ミリ秒〜秒単位のリアルタイム制御と設備保護</strong>を現場内で自律完結。インターネット遮断時も単独で止まらず稼働を維持します。
+                時限同期・高速サンプリング・PCSへの放電指令・フェールセーフ安全待機など、<strong>リアルタイム制御と設備保護</strong>を現場内で自律完結。インターネット遮断時も単独で止まらず稼働を維持します。
               </p>
             </div>
             <div className="p-4 bg-paper border border-paper-border">

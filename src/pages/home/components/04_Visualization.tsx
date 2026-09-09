@@ -50,11 +50,11 @@ export const Visualization: React.FC = () => {
               <span className="font-bold text-paper-light tracking-wider">
                 SPAQ CORE EDGE TELEMETRY CONSOLE
               </span>
-              <Badge variant="graphite" size="sm">NODE-01 / JST</Badge>
+              <Badge variant="graphite" size="sm">DEMONSTRATION</Badge>
             </div>
             <div className="flex items-center gap-4 text-slate-400 text-[11px]">
-              <span>NTP同期: ±3ms</span>
-              <span>Modbus通信: 正常 (1280ms)</span>
+              <span>時刻同期: 正常</span>
+              <span>設備通信: 正常</span>
               <span className="text-signal-lime">● ONLINE</span>
             </div>
           </div>
@@ -67,15 +67,15 @@ export const Visualization: React.FC = () => {
                 <div className="bg-graphite-card border border-graphite-border p-4 space-y-1">
                   <span className="text-[11px] text-slate-400 block">契約デマンド / 安全目標</span>
                   <div className="text-xl sm:text-2xl font-bold text-amber-300">
-                    360 <span className="text-xs font-normal text-slate-400">/ 399 kW</span>
+                    設備別設計
                   </div>
-                  <span className="text-[10px] text-slate-400 block">補正率 5% ｜ 余裕 20kW</span>
+                  <span className="text-[10px] text-slate-400 block">計測特性・安全余裕を考慮</span>
                 </div>
 
                 <div className="bg-graphite-card border border-graphite-border p-4 space-y-1">
-                  <span className="text-[11px] text-slate-400 block">実効受電電力 (R004)</span>
+                  <span className="text-[11px] text-slate-400 block">実効受電電力</span>
                   <div className="text-xl sm:text-2xl font-bold text-signal-lime">
-                    348.2 <span className="text-xs font-normal text-slate-400">kW</span>
+                    目標範囲内
                   </div>
                   <span className="text-[10px] text-emerald-400 block">▲ 目標内維持（安全）</span>
                 </div>
@@ -83,17 +83,17 @@ export const Visualization: React.FC = () => {
                 <div className="bg-graphite-card border border-graphite-border p-4 space-y-1">
                   <span className="text-[11px] text-slate-400 block">蓄電池 PCS出力</span>
                   <div className="text-xl sm:text-2xl font-bold text-paper-light">
-                    +48.0 <span className="text-xs font-normal text-slate-400">kW (放電)</span>
+                    放電制御中
                   </div>
-                  <span className="text-[10px] text-signal-lime block">最大能力 50kW (96%)</span>
+                  <span className="text-[10px] text-signal-lime block">設備能力に応じて出力を調整</span>
                 </div>
 
                 <div className="bg-graphite-card border border-graphite-border p-4 space-y-1">
                   <span className="text-[11px] text-slate-400 block">蓄電池 残容量 (SOC)</span>
                   <div className="text-xl sm:text-2xl font-bold text-paper-light">
-                    78.4 <span className="text-xs font-normal text-slate-400">%</span>
+                    余力を確保
                   </div>
-                  <span className="text-[10px] text-slate-400 block">セル温度 26.8℃ 正常</span>
+                  <span className="text-[10px] text-slate-400 block">蓄電池の状態を継続監視</span>
                 </div>
               </div>
 
@@ -102,28 +102,28 @@ export const Visualization: React.FC = () => {
                 <div className="space-y-2">
                   <span className="text-slate-400 block">時限フェーズ</span>
                   <span className="text-sm font-bold text-signal-lime block">
-                    Phase 03: 通常自動制御 (14:32 / 30:00)
+                    通常協調フェーズ
                   </span>
                   <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
-                    生需要の上昇トレンドを検知し、安全目標（360kW）を守るため48kWの連続放電を自律継続中。
+                    需要の上昇傾向と蓄電池余力を評価し、安全目標に沿って必要な放電を自律判断。
                   </p>
                 </div>
                 <div className="space-y-2">
                   <span className="text-slate-400 block">反実仮想推定（放電前需要）</span>
                   <span className="text-sm font-bold text-red-400 block">
-                    396.2 kW (推定生需要)
+                    需要上昇を検知
                   </span>
                   <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
-                    放電がなかった場合は契約電力（399kW）間近まで迫っていたことをリアルタイムに逆算して記録。
+                    蓄電池による需要補完分を加味し、制御がなかった場合の負荷と判断根拠を記録。
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-slate-400 block">制御主体 (COM-01)</span>
+                  <span className="text-slate-400 block">制御主体</span>
                   <span className="text-sm font-bold text-paper-light block">
                     SPAQ CORE (Single Writer)
                   </span>
                   <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
-                    排他レジスタ制御権限を単独保持。他機器の競合介入ゼロを保証。
+                    制御指令の権限を一元化し、他機器との競合を防止。
                   </p>
                 </div>
               </div>
@@ -134,8 +134,8 @@ export const Visualization: React.FC = () => {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-graphite-border text-slate-400 text-[11px]">
-                    <th className="py-2 px-3">TIMESTAMP</th>
-                    <th className="py-2 px-3">REASON CODE</th>
+                    <th className="py-2 px-3">EVENT SEQUENCE</th>
+                    <th className="py-2 px-3">DECISION CATEGORY</th>
                     <th className="py-2 px-3">REASON DESCRIPTION</th>
                     <th className="py-2 px-3">COMMAND</th>
                     <th className="py-2 px-3">WRITER</th>
@@ -144,34 +144,34 @@ export const Visualization: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-graphite-border/50 text-[11px]">
                   <tr>
-                    <td className="py-2.5 px-3 text-slate-300">14:15:00.042</td>
-                    <td className="py-2.5 px-3 text-signal-lime">RC_STARTUP_DISCHARGE</td>
-                    <td className="py-2.5 px-3 text-slate-200">時限開始0:15経過・生需要上昇に伴う先回り放電</td>
-                    <td className="py-2.5 px-3 text-emerald-400">+50 kW (Discharge)</td>
+                    <td className="py-2.5 px-3 text-slate-300">需要変化時</td>
+                    <td className="py-2.5 px-3 text-signal-lime">先行放電</td>
+                    <td className="py-2.5 px-3 text-slate-200">需要上昇の兆候に基づく先回り放電</td>
+                    <td className="py-2.5 px-3 text-emerald-400">放電指令</td>
                     <td className="py-2.5 px-3 text-slate-400">SPAQ_CORE</td>
                     <td className="py-2.5 px-3 text-emerald-400">VERIFIED</td>
                   </tr>
                   <tr>
-                    <td className="py-2.5 px-3 text-slate-300">14:00:15.110</td>
-                    <td className="py-2.5 px-3 text-slate-400">RC_BASELINE_MEASURED</td>
-                    <td className="py-2.5 px-3 text-slate-200">時限冒頭15秒基準計測完了・初期受電320kW</td>
-                    <td className="py-2.5 px-3 text-slate-400">0 kW (Standby)</td>
+                    <td className="py-2.5 px-3 text-slate-300">観測更新時</td>
+                    <td className="py-2.5 px-3 text-slate-400">基準需要の観測</td>
+                    <td className="py-2.5 px-3 text-slate-200">基準となる需要と設備状態を取得</td>
+                    <td className="py-2.5 px-3 text-slate-400">監視・待機</td>
                     <td className="py-2.5 px-3 text-slate-400">SPAQ_CORE</td>
                     <td className="py-2.5 px-3 text-emerald-400">VERIFIED</td>
                   </tr>
                   <tr>
-                    <td className="py-2.5 px-3 text-slate-300">13:59:45.002</td>
-                    <td className="py-2.5 px-3 text-amber-300">RC_BOUNDARY_GUARD</td>
-                    <td className="py-2.5 px-3 text-slate-200">時限境界15秒前・充電停止ガード実行</td>
-                    <td className="py-2.5 px-3 text-slate-400">0 kW (Charge Stop)</td>
+                    <td className="py-2.5 px-3 text-slate-300">時限切替前</td>
+                    <td className="py-2.5 px-3 text-amber-300">境界保護</td>
+                    <td className="py-2.5 px-3 text-slate-200">次時限への影響を評価し充電を停止</td>
+                    <td className="py-2.5 px-3 text-slate-400">充電停止</td>
                     <td className="py-2.5 px-3 text-slate-400">SPAQ_CORE</td>
                     <td className="py-2.5 px-3 text-emerald-400">VERIFIED</td>
                   </tr>
                   <tr>
-                    <td className="py-2.5 px-3 text-slate-300">13:57:00.320</td>
-                    <td className="py-2.5 px-3 text-sky-400">RC_LAST_SPURT_CHARGE</td>
+                    <td className="py-2.5 px-3 text-slate-300">余力検出時</td>
+                    <td className="py-2.5 px-3 text-sky-400">余力充電</td>
                     <td className="py-2.5 px-3 text-slate-200">時限残余電力量再計算に基づくラストスパート急速充電</td>
-                    <td className="py-2.5 px-3 text-sky-400">-45 kW (Charge)</td>
+                    <td className="py-2.5 px-3 text-sky-400">充電指令</td>
                     <td className="py-2.5 px-3 text-slate-400">SPAQ_CORE</td>
                     <td className="py-2.5 px-3 text-emerald-400">VERIFIED</td>
                   </tr>
@@ -179,13 +179,13 @@ export const Visualization: React.FC = () => {
               </table>
 
               <div className="pt-2 text-[10px] text-slate-500 font-mono">
-                ※すべての制御イベントは13ヶ月間、装置内不揮発メモリおよびクラウド監査基盤に二重保持されます。
+                ※すべての制御イベントは長期にわたり、装置内不揮発メモリおよびクラウド監査基盤に二重保持されます。
               </div>
             </div>
           )}
 
-          <div className="mt-4 pt-3 border-t border-graphite-border flex items-center justify-between text-[11px] font-mono text-slate-500">
-            <span>画面イメージ（公開検証仕様）</span>
+          <div className="mt-4 pt-3 border-t border-graphite-border flex flex-wrap gap-2 items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>概念画面：判断の流れと記録項目を表示</span>
             <span>ログ出力形式: JSON / CSV対応</span>
           </div>
         </div>

@@ -1,7 +1,6 @@
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
-  const location = useLocation();
   
   return (
     <div className="relative flex flex-col items-center justify-center h-screen text-center px-4">
@@ -12,9 +11,9 @@ export default function NotFound() {
         404
       </h1>
       <div className="relative z-10">
-        <h1 className="text-xl md:text-2xl font-semibold mt-6">This page has not been generated</h1>
-        <p className="mt-2 text-base text-gray-400 font-mono">{location.pathname}</p>
-        <p className="mt-4 text-lg md:text-xl text-gray-500">Tell me more about this page, so I can generate it</p>
+        <h1 className="text-xl md:text-2xl font-semibold mt-6">ページが見つかりません</h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-500">お探しのページは移動または削除された可能性があります。</p>
+        <Link to="/" className="inline-block mt-6 underline">トップページへ戻る</Link>
       </div>
     </div>
   );

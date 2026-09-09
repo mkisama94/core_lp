@@ -1,7 +1,7 @@
 const alerts = [
   { level: 'error', icon: 'ri-error-warning-line', color: 'text-red-500', bg: 'bg-red-50', border: 'border-red-100', time: '14:32', msg: 'デマンド契約超過リスク（予測512kW / 契約500kW）' },
-  { level: 'warn',  icon: 'ri-alert-line',         color: 'text-orange-500', bg: 'bg-orange-50', border: 'border-orange-100', time: '14:28', msg: '生産ライン1 電力消費が上限の80%を超過' },
-  { level: 'warn',  icon: 'ri-alert-line',         color: 'text-orange-500', bg: 'bg-orange-50', border: 'border-orange-100', time: '14:15', msg: '蓄電池残量が20%以下に低下' },
+  { level: 'warn',  icon: 'ri-alert-line',         color: 'text-orange-500', bg: 'bg-orange-50', border: 'border-orange-100', time: '14:28', msg: '生産ラインの電力消費が注意域に接近' },
+  { level: 'warn',  icon: 'ri-alert-line',         color: 'text-orange-500', bg: 'bg-orange-50', border: 'border-orange-100', time: '14:15', msg: '蓄電池残量が低下し運用余力の確認が必要' },
   { level: 'info',  icon: 'ri-information-line',   color: 'text-teal-500',  bg: 'bg-teal-50', border: 'border-teal-100', time: '13:50', msg: '太陽光発電量が本日最大値を更新（185kW）' },
   { level: 'info',  icon: 'ri-information-line',   color: 'text-teal-500',  bg: 'bg-teal-50', border: 'border-teal-100', time: '13:20', msg: '空調設備の自動制御を開始しました' },
 ];
