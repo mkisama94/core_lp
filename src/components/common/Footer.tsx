@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm pt-2">
-              予測と制御をつなぐ、電力運用のコア。
+              工場・施設向けエネルギーマネジメントシステム。
               電力需要に合わせて蓄電池の充放電を判断し、施設のピーク抑制と日々の運用を支えます。
             </p>
 

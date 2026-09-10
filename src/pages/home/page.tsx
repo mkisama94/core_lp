@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from '../../components/common/Navbar';
 import { Footer } from '../../components/common/Footer';
 import { Hero } from './components/01_Hero';
@@ -23,7 +23,7 @@ const schemaOrg = {
       alternateName: 'SPAQ Inc.',
       url: 'https://spaq.co.jp/',
       description:
-        '再生可能エネルギー事業および電力運用の先読み制御プロダクト「SPAQ CORE」を提供する企業です。',
+        '再生可能エネルギー事業およびエネルギーマネジメントシステム「SPAQ CORE」を提供する企業です。',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+81-48-961-8427',
@@ -35,7 +35,7 @@ const schemaOrg = {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: `${SITE_URL}/`,
-      name: 'SPAQ CORE | 電力の、その先を読む。',
+      name: 'SPAQ CORE | 工場・施設向けエネルギーマネジメントシステム',
       publisher: { '@id': `${SITE_URL}/#organization` },
       inLanguage: 'ja',
     },
@@ -44,7 +44,7 @@ const schemaOrg = {
       '@id': `${SITE_URL}/#spaq-core`,
       name: 'SPAQ CORE',
       description:
-        '予測と制御をつなぐ、電力運用のコア。30分デマンド時限の電力需要を先読みし、産業用蓄電池を自律制御してピーク超過を防ぐエネルギーマネジメントシステム。',
+        '工場・施設向けのエネルギーマネジメントシステム（EMS）。電力需要を先読みして蓄電池の充放電を自動で調整し、電力ピークの抑制と日々の運用管理を支えます。',
       brand: { '@type': 'Brand', name: 'SPAQ CORE' },
       manufacturer: { '@id': `${SITE_URL}/#organization` },
       category: '産業用エネルギーマネジメントシステム (EMS)',

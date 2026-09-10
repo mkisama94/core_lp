@@ -40,8 +40,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryLabel: '施設・産業向け',
     status: 'available',
     statusLabel: '提供中',
-    headline: '予測と制御をつなぐ、電力運用のコア。',
-    summary: '電力需要と設備の状態を捉え、蓄電池の充放電を判断。現場に合わせた電力運用を支えます。',
+    headline: '蓄電池を賢く動かし、電力ピークを抑える。',
+    summary: '工場・施設向けのエネルギーマネジメントシステム（EMS）。電力需要を先読みして蓄電池の充放電を自動で調整し、ピーク抑制と日々の運用管理を支えます。',
     targetFacility: [
       '工作機械・切削ラインを有する金属・部品加工工場',
       '冷凍冷蔵・搬送設備が常時稼働する物流倉庫',

@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-3">
               <Badge variant="lime" size="md">
-                POWER MANAGEMENT PRODUCT
+                SPAQ CORE / EMS
               </Badge>
               <span className="font-mono text-xs text-slate-400">
                 CORE SERIES / 施設・産業向け提供中
@@ -24,17 +24,19 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="space-y-3">
-              <h1 className="font-sans text-3xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-paper-light leading-[1.15]">
-                電力の、その先を読む。
+              <h1 className="font-sans text-[26px] sm:text-[44px] lg:text-[48px] font-black tracking-tight text-paper-light leading-[1.25]">
+                <span className="block text-lg sm:text-2xl font-bold mb-3">工場・施設のための</span>
+                <span className="block">エネルギー</span>
+                <span className="block">マネジメントシステム。</span>
               </h1>
               <p className="font-mono text-lg sm:text-xl lg:text-2xl text-signal-lime font-semibold tracking-wide">
-                予測と制御をつなぐ、電力運用のコア。
+                蓄電池を賢く動かし、電力ピークを抑える。
               </p>
             </div>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-sans">
-              電力需要と設備の状態をリアルタイムに捉え、産業用蓄電池の充放電を自律判断。
-              30分デマンド時限のピーク超過を防ぎ、工場・施設の電力運用を安全に最適化します。
+              SPAQ COREは、電力需要を先読みして蓄電池の充放電を自動で調整するEMSです。
+              空調や生産設備への影響に配慮しながら、電力ピークの抑制と日々の運用管理を支えます。
             </p>
 
             {/* CTAs */}
