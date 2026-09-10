@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from '../../components/common/Navbar';
 import { Footer } from '../../components/common/Footer';
 import { Hero } from './components/01_Hero';
+import { Benefits } from './components/Benefits';
 import { HowItWorks } from './components/02_HowItWorks';
 import { PredictiveControl } from './components/03_PredictiveControl';
 import { Visualization } from './components/04_Visualization';
@@ -91,10 +92,13 @@ export default function HomePage() {
     <div className="min-h-screen bg-graphite flex flex-col selection:bg-signal-lime selection:text-graphite-deep">
       <Navbar isScrolled={isScrolled} />
 
-      {/* Main Content Sections (01 - 09) */}
+      {/* Hero and Main Content Sections (01 - 09) */}
       <main className="flex-grow">
-        {/* 01: Hero */}
+        {/* Hero */}
         <Hero />
+
+        {/* 01: Benefits */}
+        <Benefits />
 
         {/* Anchor compatibility for legacy links */}
         <div id="features" className="scroll-mt-24" />
