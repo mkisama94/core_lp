@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight, Cpu, ShieldCheck, Activity, ChevronDown } from 'lucide-react';
 import { Button } from '../../../components/common/Button';
-import { Badge } from '../../../components/common/Badge';
 
 export const Hero: React.FC = () => {
   return (
@@ -14,29 +13,23 @@ export const Hero: React.FC = () => {
           
           {/* Left: Copy & Value Proposition (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-3">
-              <Badge variant="lime" size="md">
-                SPAQ CORE / EMS
-              </Badge>
-              <span className="font-mono text-xs text-slate-400">
-                CORE SERIES / 施設・産業向け提供中
-              </span>
-            </div>
+            <p className="font-sans text-base sm:text-xl font-semibold tracking-wide text-signal-lime">
+              AI時代の電力インテリジェンス
+            </p>
 
             <div className="space-y-3">
               <h1 className="font-sans text-[26px] sm:text-[44px] lg:text-[48px] font-black tracking-tight text-paper-light leading-[1.25]">
-                <span className="block text-lg sm:text-2xl font-bold mb-3">工場・施設のための</span>
-                <span className="block">エネルギー</span>
-                <span className="block">マネジメントシステム。</span>
+                <span className="block">産業用電力</span>
+                <span className="block">マネジメントシステム</span>
               </h1>
               <p className="font-mono text-lg sm:text-xl lg:text-2xl text-signal-lime font-semibold tracking-wide">
-                蓄電池を賢く動かし、電力ピークを抑える。
+                SPAQ CORE
               </p>
             </div>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-sans">
-              SPAQ COREは、電力需要を先読みして蓄電池の充放電を自動で調整するEMSです。
-              空調や生産設備への影響に配慮しながら、電力ピークの抑制と日々の運用管理を支えます。
+              電力を予測し、設備を賢く動かす。<br />
+              産業のエネルギー利用を、ソフトウェアで最適化する。
             </p>
 
             {/* CTAs */}
